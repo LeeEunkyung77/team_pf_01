@@ -1,0 +1,31 @@
+/* 피씨 */
+@media screen and (min-width:1201px){
+/* topBanner */
+#topBanner{position: relative; height: 85vh; background-size: cover; background-position: right; background-repeat: no-repeat;}
+#topBanner ul{position: absolute; top: 15vh; left: 30%; height: 100%; width: 5000px; display: flex; justify-content: space-between;}
+#topBanner ul li{display: flex; width: 1200px; height: 100%; max-height: 800px;}
+#topBanner ul li img{width: 100%; object-fit: cover;}
+#topBanner ul li .topBanner_in_text{width: 800px; height: 500px; position: absolute; top: 40vh; right: 93%; z-index: 1;}
+#topBanner ul li .topBanner_in_text p{font-size: 32px; color: #fefefe; text-shadow: 2px 2px 2px #212121;}
+#topBanner ul li:first-child .topBanner_in_text p{display: block;}
+#topBanner ul li .topBanner_in_text p{display: none;}
+#topBanner .top_benner_controls{position: absolute; top:105%; left: 7%; display: flex; width: 300px; line-height: 40px; justify-content: space-between;}
+#topBanner .top_benner_controls p{font-size: 30px;}
+#topBanner .top_benner_controls button{width: 40px; height: 40px;}
+
+/* aboutUs */
+#aboutUs{position: relative; height: 100vh; display: flex; margin-top: 20vh;}
+#aboutUs div{position: relative; display: flex; flex-direction: column; justify-content: space-between; height: 320px; margin: auto;}
+#aboutUs div h2{font-size: 36px;}
+#aboutUs div h2:nth-child(2){margin: 20px 0;}
+#aboutUs div p{font-size: 20px;}
+#aboutUs div button{width: 300px; height: 45px; line-height: 45px; display: flex; justify-content: space-around; margin: 95% auto; border-radius: 25px; background-color: #fefefe;}
+
+/* midBanner */
+#midBanner{position: relative;}
+}
+
+/* 타블랫 */
+@media screen and (min-width:801px) and (max-width:1200px){
+    
+}
