@@ -31,8 +31,8 @@
 #aboutUs .about_us_text h2{font-size: 36px;}
 #aboutUs .about_us_text h2:nth-child(2){margin: 20px 0;}
 #aboutUs div p{font-size: 20px;}
-#aboutUs .about_us_btn button{width: 250px; height: 45px; line-height: 45px; display: flex; justify-content: space-around; border-radius: 25px; background-color: #fefefe; border: 1px solid #212121;}
-#aboutUs div button img{width: 40px;}
+#aboutUs .about_us_btn a{width: 250px; height: 45px; line-height: 45px; display: flex; justify-content: space-around; border-radius: 25px; background-color: #fefefe; border: 1px solid #212121;}
+#aboutUs div a img{width: 40px;}
 
 /* midBanner */
 #midBanner{position: relative; height: 100vh; background-size: cover; background-position: right; background-repeat: no-repeat; overflow: hidden;}
@@ -60,9 +60,9 @@
 
 #event .event_img .event_logo{position: absolute; display: flex; flex-direction: column; justify-content: center; max-width: 30%; top: 15%; left: 15%;}
 #event .event_img .event_logo img{height: 70%;}
-#event .event_img .event_logo button{margin-top: 15px; display: flex; justify-content: space-evenly; width: 90%; height: 40px; line-height: 40px; font-weight: 700; border-radius: 25px; font-size: 0.8em;}
-#event .event_img .event_logo button img{width: 30px;}
-#event .event_img .event_logo button:hover{color: #fefefe; border-color: #23A03A; background-color: #23A03A; transition-duration: 0.5s;}
+#event .event_img .event_logo a{margin-top: 15px; display: flex; justify-content: space-evenly; width: 85%; height: 50px; line-height: 50px; font-weight: 700; border-radius: 25px; font-size: 0.8em; background-color: #efefef;}
+#event .event_img .event_logo a img{width: 35px;}
+#event .event_img .event_logo a:hover{color: #fefefe; border-color: #23A03A; background-color: #23A03A; transition-duration: 0.5s;}
 
 /* newsroom */
 #newsroom{position: relative; height: 100vh;}
@@ -73,7 +73,12 @@
 #newsroom .newsroom_title_wrap .newsroom_title h2{font-size: 3.5em;}
 #newsroom .newsroom_title_wrap .newsroom_title p{font-size: 3.5em;}
 #newsroom .newsroom_title_wrap .newsroom_btn{display: flex; justify-content: space-evenly;}
-#newsroom .newsroom_title_wrap button{width: 25%; height: 50px; display: flex; justify-content: space-around; line-height: 50px; border-radius: 25px;}
+#newsroom .newsroom_title_wrap a{width: 25%;}
+#newsroom .newsroom_title_wrap a div{width: 100%; margin: 0 auto; height: 50px; display: flex; justify-content: space-around; line-height: 50px; border: 1px solid #212121; box-sizing: border-box; border-radius: 25px; padding: 0 20px;}
+#newsroom .newsroom_title_wrap a p{font-size: 1.2em; font-weight: 500;}
+#newsroom .newsroom_title_wrap a img{opacity: 0; display: none;}
+/* #newsroom .newsroom_title_wrap a:hover div{transition-duration: 1s; width: 110%;} */
+#newsroom .newsroom_title_wrap a:hover img{opacity: 1; transition-duration: 0.5s; display: block;}
 
 /* 피씨 */
 @media screen and (min-width:1201px){

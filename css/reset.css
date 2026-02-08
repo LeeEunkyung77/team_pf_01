@@ -12,6 +12,6 @@
 *{margin: 0; padding: 0;}
 li{list-style: none;}
 img{display: block; border: none;}
-a{text-decoration: none; color: #212121;}
+a{text-decoration: none; color: #212121; display: block;}
 
 button{cursor: pointer; border: none;}
