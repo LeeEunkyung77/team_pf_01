@@ -144,8 +144,8 @@
 #sustainabilityBanner .sustainability_banner{position: relative; display: flex; flex-direction: column; justify-content: center; height: 100%; text-align: center; color: #ededed;}
 #sustainabilityBanner .sustainability_banner h2{font-size: 4em; font-weight: 500; text-shadow: 1px 1px 1px #212121; margin-bottom: 30px;}
 #sustainabilityBanner .sustainability_banner p{font-size: 1.2em; font-weight: 100; text-shadow: 1px 1px 1px #212121;}
-.h_line::after{content: ""; position: absolute; width: 2px; height: 100px; background-color: #EF151E; left: 50%; bottom: -50px; z-index: 1;}
-/* .h_line:hover::after{height: 0px; transition-duration: 0.5s;} */
+.h_line::after{content: ""; position: absolute; width: 2px; height: 100px; background-color: #EF151E; left: 50%; top: 95vh; z-index: 1;}
+/* .h_line:hover::after{height: 10px; transition-duration: 0.5s; animation-direction: reverse;} */
 /* sustainability_logo */
 #sustainabilityLogo{position: relative; height: 100vh;}
 #sustainabilityLogo div{position: relative; height: 100%; display: flex; justify-content: center; flex-direction: column;}
@@ -159,7 +159,7 @@
 #sustainabilityList div{position: relative; height: 100%; text-align: center; display: flex; flex-direction: column; justify-content: center; font-size: 4em;}
 #sustainabilityList .sustainability_list{position: absolute; top: 25%; display: flex; justify-content: space-between; width: 1410px; margin-left: 10%;}
 #sustainabilityList .sustainability_list>li{width: 450px; height: 480px; display: flex; flex-direction: column; border-radius: 5rem; overflow: hidden;}
-#sustainabilityList .sustainability_list>li:hover>p{margin-top: 20px; transition-duration: 0.5s;}
+#sustainabilityList .sustainability_list>li:hover>p{margin-top: 20px; transition-duration: 0s;}
 #sustainabilityList .sustainability_list>li:first-child:hover{transition-duration: 0.5s; background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url("../img/overview2_1.jpg");}
 #sustainabilityList .sustainability_list>li:nth-child(2):hover{transition-duration: 0.5s; background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url("../img/overview2_2.jpg");}
 #sustainabilityList .sustainability_list>li:last-child:hover{transition-duration: 0.5s; background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url("../img/overview2_3.jpg");}
@@ -191,7 +191,7 @@
 #newsroom .new_list ul{width: 200%; display: flex; justify-content: space-evenly;}
 #newsroom .new_list ul li{width: 9%; background-image: url('/img/img14_aboutus_01.jpg'); background-position: center; background-repeat: no-repeat; background-size: cover;}
 #newsroom .new_list ul li .news_bg{width: 100%; height: 60%;}
-#newsroom .new_list ul li:hover .news_bg{ height: 100%;background-image: linear-gradient(#ffffff, #FF9700); opacity: 0.5; transition-duration: 0.5s;}
+#newsroom .new_list ul li:hover .news_bg{height: 100%; background-image: linear-gradient(#ffffff, #FF9700); opacity: 0.5; transition-duration: 0.5s;}
 #newsroom .new_list ul li:hover .news_text{opacity: 1; transition-duration: 0.5s;}
 #newsroom .new_list ul li .news_text{height: 100%; display: flex; flex-direction: column; justify-content: end; opacity: 0;}
 #newsroom .new_list ul li .news_text p:nth-child(2){overflow: hidden;

@@ -6,6 +6,10 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/main.css">
+    <script src="script/jquery-3.7.0.min.js"></script>
+    <script src="script/jquery.cookie.js"></script>
+    <script src="script/lucid.js"></script>
+    <script src="script/main.js"></script>
     <title>CJ제일제당</title>
 </head>
 <body>
@@ -309,58 +313,43 @@
         </ul>
         </div>
     </div>
-    <section id="topBanner" style="background-image: url('img/TopBenner_0.jpg');">
+    <section id="topBanner" class="index">
+        <h2 class="top_text">
+            건강과 안전을 최우선으로<br>
+            Nature to Table,<br>
+            세계의 모든 식탁이 K-Food로 즐거워집니다
+        </h2>
         <ul class="topBanner_out">
             <li class="topBanner_in">
                 <div class="topBanner_in_text">
-                    <p>건강과 안전을 최우선으로<br>
-                    Nature to Table,<br>
-                    세계의 모든 식탁이 K-Food로 즐거워집니다
-                    </p>
                 </div>
                 <img src="img/TopBenner_0.jpg" alt="탑베너1">
             </li>
             <li class="topBanner_in">
-                <div class="topBanner_in_text">
-                    <p>온라인 접점에서 한식을 설계하다<br>
-                    영국에서 비비고를 전하는 FayeMin
-                    </p>
-                </div>
                 <img src="img/TopBenner_1.jpg" alt="탑베너2">
             </li>
             <li class="topBanner_in">
-                <div class="topBanner_in_text">
-                    <p>CJ제일제당, 생분해성 바이오 소재<br>
-                    'PHA' 산업계 전반 상용화 속도<br>
-                    글로벌 기업까지 잇단 러브콜
-                    </p>
-                </div>
                 <img src="img/TopBenner_2.jpg" alt="탑베너3">
             </li>
             <li class="topBanner_in">
-                <div class="topBanner_in_text">
-                    <p>CJ더마켓이<br>
-                    건강하고 편리한<br>
-                    식생활을 만들어갑니다
-                    </p>
-                </div>
                 <img src="img/TopBenner_3.jpg" alt="탑베너4">
             </li>
         </ul>
         <div class="empty_box"></div>
         <div class="top_benner_controls">
-            <button><img src="" alt="left"></button>
-            <p><span>1</span>/4</p>
-            <button><img src="" alt="right"></button>
+            <button class="prev_btn"><img src="" alt="left"></button>
+            <p><span class="cnt">1</span>/4</p>
+            <button class="next_btn"><img src="" alt="right"></button>
         </div>
     </section>
-    <section id="aboutUs">
+    <section id="aboutUs" class="index">
         <div class="about_us_text">
-            <h2>CJ제일제당은</h2>
-            <h2 class="yellow">끊임없는 도전과 혁신을 통해<br>
+            <div class="msg_box"></div>
+            <h2 class="msg msg1">CJ제일제당은</h2>
+            <h2 class="yellow msg msg2">끊임없는 도전과 혁신을 통해<br>
                 글로벌 식품ㆍBIO 기업으로 도약하고 있습니다.
             </h2>
-            <p>
+            <p class="msg msg3">
                 끊임없는 도전과 혁신을 통해<br>
                 글로벌 식품·BIO 기업으로 도약하고 있습니다.<br>
                 70년 이상 쌓아온 변화와 성장의 DNA를 바탕으로<br>
@@ -374,7 +363,7 @@
             </a>
         </div>
     </section>
-    <section id="midBanner" style="background-image: url('img/TopBenner_3.jpg');">
+    <section id="midBanner" class="index">
         <ul class="mid_banner_img">
             <li>
                 <div class="logo_text">
@@ -449,7 +438,7 @@
             <li></li>
         </ul>
     </section>
-    <section id="event">
+    <section id="event" class="index">
         <div class="event_name">
             <h2 class="english">bibigo</h2>
             <div class="mid_line"></div>
@@ -469,7 +458,7 @@
             </div>
         </div>
     </section>
-    <section id="newsroom">
+    <section id="newsroom" class="index">
         <div class="newsroom_wrap">
             <div class="newsroom_left" style="background-color: orange;">
 
