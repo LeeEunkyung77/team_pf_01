@@ -126,12 +126,12 @@ $(function(){
         if(scrollTop>mbiTop1-200){  // 스크롤에 따른 about의 animate
             if($('.mid_banner_img1').attr('data-ok')!='ok'){
                 $('.mid_banner_img1').attr('data-ok','ok');
+                $(`.mid_banner_img1`).addClass('fix');
+                $(`.mid_banner_img2`).removeClass('fix');
+                $('.mid_banner_controls li').removeClass('long');
+                $('.mid_banner_controls li').eq(0).addClass('long');
+                console.log('.mid_banner_img2');
             }
-            $(`.mid_banner_img1`).addClass('fix');
-            $(`.mid_banner_img2`).removeClass('fix');
-            $('.mid_banner_controls li').removeClass('long');
-            $('.mid_banner_controls li').eq(0).addClass('long');
-            console.log('.mid_banner_img2');
         }else if(scrollTop<mbiTop1-200 && scrollTop>midBannerTop-200){
                 $(`.mid_banner_img1`).addClass('fix');
                 $(`.mid_banner_img2`).removeClass('fix');
@@ -140,14 +140,14 @@ $(function(){
         if(scrollTop>mbiTop2-200){  // 스크롤에 따른 about의 animate
             if($('.mid_banner_img2').attr('data-ok')!='ok'){
                 $('.mid_banner_img2').attr('data-ok','ok');
+                $(`.mid_banner_img1`).removeClass('fix');
+                $(`.mid_banner_img2`).addClass('fix');
+                $(`.mid_banner_img3`).removeClass('fix');
+                $('.text1').css('opacity','0');
+                $('.mid_banner_controls li').removeClass('long');
+                $('.mid_banner_controls li').eq(1).addClass('long');
+                console.log('.mid_banner_img2');
             }
-            $(`.mid_banner_img1`).removeClass('fix');
-            $(`.mid_banner_img2`).addClass('fix');
-            $(`.mid_banner_img3`).removeClass('fix');
-            $('.text1').css('opacity','0');
-            $('.mid_banner_controls li').removeClass('long');
-            $('.mid_banner_controls li').eq(1).addClass('long');
-            console.log('.mid_banner_img2');
         }else if(scrollTop<mbiTop2-200 && scrollTop>mbiTop1-200){
                 $(`.mid_banner_img2`).removeClass('fix');
                 $(`.mid_banner_img1`).addClass('fix');
@@ -159,14 +159,14 @@ $(function(){
         if(scrollTop>mbiTop3-200){  // 스크롤에 따른 about의 animate
             if($('.mid_banner_img3').attr('data-ok')!='ok'){
                 $('.mid_banner_img3').attr('data-ok','ok');
+                $(`.mid_banner_img2`).removeClass('fix');
+                $(`.mid_banner_img3`).addClass('fix');
+                $(`.mid_banner_img4`).removeClass('fix');
+                $('.text2').css('opacity','0');
+                $('.mid_banner_controls li').removeClass('long');
+                $('.mid_banner_controls li').eq(2).addClass('long');
+                console.log('.mid_banner_img3');
             }
-            $(`.mid_banner_img2`).removeClass('fix');
-            $(`.mid_banner_img3`).addClass('fix');
-            $(`.mid_banner_img4`).removeClass('fix');
-            $('.text2').css('opacity','0');
-            $('.mid_banner_controls li').removeClass('long');
-            $('.mid_banner_controls li').eq(2).addClass('long');
-            console.log('.mid_banner_img3');
         }else if(scrollTop<mbiTop3-200 && scrollTop>mbiTop2-200){
                 $(`.mid_banner_img3`).removeClass('fix');
                 $(`.mid_banner_img2`).addClass('fix');
@@ -178,14 +178,14 @@ $(function(){
         if(scrollTop>mbiTop4-200){  // 스크롤에 따른 about의 animate
             if($('.mid_banner_img4').attr('data-ok')!='ok'){
                 $('.mid_banner_img4').attr('data-ok','ok');
+                $(`.mid_banner_img3`).removeClass('fix');
+                $(`.mid_banner_img4`).addClass('fix');
+                $(`.mid_banner_img5`).removeClass('fix');
+                $('.text3').css('opacity','0');
+                $('.mid_banner_controls li').removeClass('long');
+                $('.mid_banner_controls li').eq(3).addClass('long');
+                console.log('.mid_banner_img4');
             }
-            $(`.mid_banner_img3`).removeClass('fix');
-            $(`.mid_banner_img4`).addClass('fix');
-            $(`.mid_banner_img5`).removeClass('fix');
-            $('.text3').css('opacity','0');
-            $('.mid_banner_controls li').removeClass('long');
-            $('.mid_banner_controls li').eq(3).addClass('long');
-            console.log('.mid_banner_img4');
         }else if(scrollTop<mbiTop4-200&&scrollTop>mbiTop3-200){
                 $(`.mid_banner_img4`).removeClass('fix');
                 $(`.mid_banner_img3`).addClass('fix');
@@ -197,13 +197,14 @@ $(function(){
         if(scrollTop>mbiTop5-200){  // 스크롤에 따른 about의 animate
             if($('.mid_banner_img5').attr('data-ok')!='ok'){
                 $('.mid_banner_img5').attr('data-ok','ok');
+                $(`.mid_banner_img4`).removeClass('fix');
+                $(`.mid_banner_img5`).addClass('fix');
+                $(`.mid_banner_img6`).removeClass('fix');
+                $('.text4').css('opacity','0');
+                $('.mid_banner_controls li').removeClass('long');
+                $('.mid_banner_controls li').eq(4).addClass('long');
+                console.log('.mid_banner_img5');
             }
-            $(`.mid_banner_img4`).removeClass('fix');
-            $(`.mid_banner_img5`).addClass('fix');
-            $('.text4').css('opacity','0');
-            $('.mid_banner_controls li').removeClass('long');
-            $('.mid_banner_controls li').eq(4).addClass('long');
-            console.log('.mid_banner_img5');
         }else if(scrollTop<mbiTop5-200 && scrollTop>mbiTop4-200){
                 $(`.mid_banner_img5`).removeClass('fix');
                 $(`.mid_banner_img4`).addClass('fix');
@@ -212,46 +213,32 @@ $(function(){
                 $('.mid_banner_controls li').eq(3).addClass('long');
         }
         
-        if(scrollTop<mbiTop6-200 && scrollTop>mbiTop5-200){
+        if(scrollTop>mbiTop6-200){  // 스크롤에 따른 about의 animate
+            if($('.mid_banner_img6').attr('data-ok')!='ok'){
+                $('.mid_banner_img6').attr('data-ok','ok');
+                $(`.mid_banner_img6`).addClass('fix');
+                $('.text5').css('opacity','0');
+                $('.mid_banner_controls li').removeClass('long');
+                $('.mid_banner_controls li').eq(5).addClass('long');
+            }
+        }else if(scrollTop<mbiTop6-200&&scrollTop>mbiTop5-200){
                 $(`.mid_banner_img6`).removeClass('fix');
                 $(`.mid_banner_img5`).addClass('fix');
                 $('.text5').css('opacity','1');
                 $('.mid_banner_controls li').removeClass('long');
                 $('.mid_banner_controls li').eq(4).addClass('long');
-        }else if(scrollTop>=mbiTop6-200){  // 스크롤에 따른 about의 animate
+        }else if(scrollTop==mbiTop6-200){
             if($('.mid_banner_img6').attr('data-ok')!='ok'){
-                $('.mid_banner_img6').attr('data-ok','ok');
+                $('.mid_banner_controls li').removeClass('long');
+                $('.mid_banner_controls li').eq(5).addClass('long');
             }
-            $(`.mid_banner_img6`).addClass('fix');
-            $(`.mid_banner_img5`).removeClass('fix');
-            $('.text5').css('opacity','0');
-            $('.mid_banner_controls li').removeClass('long');
-            $('.mid_banner_controls li').eq(5).addClass('long');
         }
-        
 
         if(scrollTop>eventTop-200){  // 스크롤에 따른 about의 animate
             if($('#event').attr('data-ok')!='ok'){
                 $('#event').attr('data-ok','ok');
                 console.log('#event');
-                if($(window).width()>1200){
-                    $('.event_img').css('border-radius','300px').css('height', '60vh').css('max-width', '75%').css('margin', '20vh auto');
-                    $('.event_logo').css('top','15%');
-                }else if($(window).width()>800){
-                    $('.event_img').css('border-radius','300px').css('height', '50vh').css('max-width', '90%').css('margin', '20vh auto');
-                    $('.event_logo').css('top','8%');
-                }else{
-                    //이미지 새로 만들기
-                    $('.event_img').css('border-radius','300px').css('height', '70vh').css('max-width', '90%').css('margin', '20vh auto').css('background-position','right');
-                    $('.event_logo').css('top','17%');
-                }
-                setTimeout(function(){
-                if($(window).width()>800){
-                    $('.mid_line').css('width','300px');
-                }else{
-                    $('.mid_line').css('width','80px');
-                }
-                },500)
+                $('.event_img').css('height', '60vh').css('max-width', '75%').css('margin', '20vh auto').css('border-radius','500px')
             }
         }
 
@@ -282,7 +269,7 @@ $(function(){
                 $('.top_text').html('온라인 접점에서 한식을 설계하다<br>영국에서 비비고를 전하는 Faye Min')
             }
             $('#topBanner').css('background-image','url(img/TopBenner_'+(next_count)+'.jpg)')
-            $('#topBanner ul li').css('right',`${next_count*25}%`);
+            $('#topBanner ul li').css('right',`${next_count*1240}px`);
             $('.cnt').text(next_count+1);
         })
         setInterval(function(){
@@ -309,6 +296,7 @@ $(function(){
             $('.cnt').text(next_count+1);
         })
     })
+
     //mid_banner_img
     $('.ctrl').click(function(){
         var long = $('.ctrl').index(this);
