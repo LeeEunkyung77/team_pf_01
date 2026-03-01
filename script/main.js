@@ -298,4 +298,20 @@ $(function(){
     })
 })
 
-//mid_banner_img
+    //mid_banner_img
+    $('.ctrl').click(function(){
+        var long = $('.ctrl').index(this);
+        $(`.ctrl`).removeClass('long');
+        $(`.ctrl:eq(` + long + `)`).addClass('long');
+        
+        $(`.mid_banner li`).removeClass('fix');
+        $(`.mid_banner li:eq(` + long + `)`).addClass('fix');
+        $('.text' + long-1).css('opacity','0');
+        
+        let mid_img = $('.mid_banner_img'+long).offset().top;
+        scrollTop = mid_img;
+        wheelNum = long + 2;
+        $('.mid_banner_img'+long).attr('data-ok','ok');
+        $('html, body').stop().animate({scrollTop:mid_img},1000);
+    })
+
