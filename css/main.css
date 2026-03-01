@@ -1,3 +1,9 @@
+
+/* * {
+  outline: 1px solid red;
+  좌우 스크롤 생겼을때 부분 확인 할 수 있는 코드
+} */
+
 /* topBanner */
 #topBanner{position: relative; height: 100vh; background-size: cover; background-position: right; background-repeat: no-repeat; overflow: hidden;background-image: url('/img/TopBenner_0.jpg'); transition-duration: 0.5s; z-index: 1;}
 #topBanner::after{content: ''; position: absolute; width: 100%; height: 10vh; background-color: #fefefe; z-index: 1; bottom: 0;}
@@ -12,7 +18,7 @@
 
 /* aboutUs */
 #aboutUs{position: relative; height: 100vh; display: flex; overflow: hidden; background-color: #ffffff; z-index: 1;}
-#aboutUs div{position: relative; display: flex; flex-direction: column; justify-content: space-between; margin: auto;}
+#aboutUs div{position: relative; display: flex; flex-direction: column; justify-content: space-between;margin: auto;}
 #aboutUs .about_us_text{width: 60%;}
 #aboutUs .about_us_btn{width: 20%; bottom: -14%;}
 #aboutUs .about_us_text h2{font-size: 36px;}
@@ -37,23 +43,23 @@
 #midBanner .mid_banner li .logo_text p{margin: 0 auto; text-align: center; margin-top: 50px; text-shadow: 1px 1px 1px #212121; color: #fefefe; font-size: 1.2em;}
 
 .mid_banner_controls{position: fixed; left: calc(50% - 125px); bottom: 5%; display: flex; justify-content: space-evenly; width: 250px;}
-.mid_banner_controls li{width: 20px; height: 20px; background-color: #212121; border-radius: 20px; transition-duration: 0.5s; cursor: pointer;}
+.mid_banner_controls li{width: 20px; height: 20px; background-color: #212121; border-radius: 20px; transition-duration: 0.5s;}
 .mid_banner_controls li.long{width: 40px; height: 20px; background-color: #23A03A;}
 
 /* event */
 #event{position: relative; height: 100vh; overflow: hidden; background-color: #ffffff; z-index: 1; margin-top: 80px;}
 
 #event .event_name{position: absolute; width: 100%; top: 5%; display: flex; justify-content: center; padding-top: 50px; z-index: 1;}
-#event .event_name .mid_line{content: ''; display: block; width: 0px; height: 1px; position: relative; background-color: #212121; margin: auto 20px; transition-duration: 0.5s;}
+#event .event_name .mid_line{content: ''; display: block; width: 300px; height: 1px; position: relative; background-color: #212121; margin: auto 20px;}
 
-#event .event_img{position: relative; height: 100vh; background-image: url('/img/bibigo_seventeen.jpg'); background-repeat: no-repeat; background-position: right; background-size: cover; transition-duration: 1.5s; overflow: hidden;}
+#event .event_img{position: relative; height: 100vh; background-image: url('/img/bibigo_seventeen.jpg'); background-repeat: no-repeat; background-position: right; background-size: cover; transition-duration: 1s;}
 /* 효과 */
 /* #event .event_img{height: 60vh; max-width: 75%; margin: 20vh auto; border-radius: 500px;} */
 /* #event .event_img{position: relative; width: 100%; height: 100%;}
 #event .event_img>img{width: 80%; margin: 0 auto; border-radius: 500px;} */
 
-#event .event_img .event_logo{position: absolute; display: flex; flex-direction: column; justify-content: center; max-width: 30%; top: 108%; left: 15%;}
-#event .event_img .event_logo img{width: 70%;}
+#event .event_img .event_logo{position: absolute; display: flex; flex-direction: column; justify-content: center; max-width: 30%; top: 15%; left: 15%;}
+#event .event_img .event_logo img{height: 70%;}
 #event .event_img .event_logo a{margin-top: 15px; display: flex; justify-content: space-evenly; width: 85%; height: 50px; line-height: 50px; font-weight: 700; border-radius: 25px; font-size: 0.8em; background-color: #efefef;}
 #event .event_img .event_logo a img{width: 35px;}
 #event .event_img .event_logo a:hover{color: #fefefe; border-color: #23A03A; background-color: #23A03A; transition-duration: 0.5s;}
@@ -73,7 +79,6 @@
 #newsroom .newsroom_title_wrap a img{opacity: 0; display: none;}
 /* #newsroom .newsroom_title_wrap a:hover div{transition-duration: 1s; width: 110%;} */
 #newsroom .newsroom_title_wrap a:hover img{opacity: 1; transition-duration: 0.5s; display: block;}
-.mobile{display: none;}
 
 /* 피씨 */
 @media screen and (min-width:1201px){
@@ -81,23 +86,7 @@
 
 /* 타블랫 */
 @media screen and (min-width:801px) and (max-width:1200px){
-  /* topBanner */
-  #topBanner ul{position: absolute; top: 15vh; left: 300px; height: 100%; width: 3400px; display: flex; justify-content: space-evenly; overflow: hidden;}
-  #topBanner ul li{position: relative; display: flex; width: 800px; height: 100%; z-index: 2; transition-duration: 0.5s; right: 0;}
-  /* aboutUs */
-  #aboutUs .about_us_text{width: 65%;}
-  #aboutUs .about_us_btn{width: 20%; bottom: -14%;}
-  #aboutUs .about_us_text h2{font-size: 1.5em;}
-  #aboutUs div>p{font-size: 1.1em; margin-top: 20px;}
-  #aboutUs .about_us_btn a{width: 170px; height: 40px; line-height: 40px;}
-  #aboutUs .about_us_btn a p{font-size: 1em;}
-  /* event */
-  #event .event_name{width: 100%; top: 8%;}
-  #event .event_img .event_logo{bottom: 20%; left: 15%;}
-  #event .event_img .event_logo img{width: 100%;}
-  #event .event_img .event_logo a{width: 100%; height: 40px; line-height: 40px; font-size: 0.8em;}
-  #event .event_img .event_logo a img{width: 35px;}
-  #event .event_img .event_logo a:hover{color: #fefefe; border-color: #23A03A; background-color: #23A03A; transition-duration: 0.5s;}
+    
 }
 
 /* 스마트폰 */

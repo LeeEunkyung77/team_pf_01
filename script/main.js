@@ -314,3 +314,7 @@ $(function(){
         $('html, body').stop().animate({scrollTop:mid_img},1000);
     })
 })
+
+
+//mid_banner_img
+
