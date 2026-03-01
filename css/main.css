@@ -1,65 +1,64 @@
-/* * {
+* {
   outline: 1px solid red;
-  좌우 스크롤 생겼을때 부분 확인 할 수 있는 코드
-} */
+  /* 좌우 스크롤 생겼을때 부분 확인 할 수 있는 코드 */
+}
 
 /* topBanner */
-#topBanner{position: relative; height: 100vh; background-size: cover; background-position: right; background-repeat: no-repeat; overflow: hidden;}
-#topBanner ul{position: absolute; top: 15vh; left: 500px; height: 100%; width: 5000px; display: flex; justify-content: space-between;}
-
+#topBanner{position: relative; height: 100vh; background-size: cover; background-position: right; background-repeat: no-repeat; overflow: hidden;background-image: url('/img/TopBenner_0.jpg'); transition-duration: 0.5s; z-index: 1;}
 #topBanner::after{content: ''; position: absolute; width: 100%; height: 10vh; background-color: #fefefe; z-index: 1; bottom: 0;}
-
 #topBanner>.empty_box{height: 100vh; width: 100%; -webkit-backdrop-filter: blur(5px); backdrop-filter: blur(5px); position: absolute;}
-
-#topBanner ul li{position: relative; display: flex; width: 1200px; height: 100%; z-index: 2;}
+#topBanner h2{position: absolute; left: 80px; top: 50%; font-weight: 500; font-size: 2em; color: #efefef; text-shadow: 1px 1px 1px #212121; z-index: 3;}
+#topBanner ul{position: absolute; top: 15vh; left: 500px; height: 100%; width: 5000px; display: flex; justify-content: space-evenly; overflow: hidden;}
+#topBanner ul li{position: relative; display: flex; width: 1200px; height: 100%; z-index: 2; transition-duration: 0.5s; right: 0;}
 #topBanner ul li img{width: 100%; object-fit: cover;}
-#topBanner ul li .topBanner_in_text{width: 800px; height: 500px; position: absolute; bottom: 7%; left: -420px; z-index: 1;}
-#topBanner ul li .topBanner_in_text p{font-size: 2.2em; color: #fefefe; text-shadow: 2px 2px 2px #212121;}
-/*  */
-#topBanner ul li:first-child .topBanner_in_text p{display: block;}
-#topBanner ul li .topBanner_in_text p{display: none;}
-/*  */
 #topBanner .top_benner_controls{position: absolute; bottom: 15%; left: 80px; display: flex; width: 300px; line-height: 40px; justify-content: space-between; z-index: 2;}
-#topBanner .top_benner_controls p{font-size: 30px;}
+#topBanner .top_benner_controls p{font-size: 30px; color: #efefef; text-shadow: 1px 1px 1px #212121;}
 #topBanner .top_benner_controls button{width: 40px; height: 40px;}
 
 /* aboutUs */
-#aboutUs{position: relative; height: 100vh; display: flex;}
-#aboutUs div{position: relative; display: flex; flex-direction: column; justify-content: space-between;margin: auto;}
+#aboutUs{position: relative; height: 100vh; display: flex; overflow: hidden; background-color: #ffffff; z-index: 1;}
+#aboutUs div{position: relative; display: flex; flex-direction: column; justify-content: space-between; margin: auto;}
 #aboutUs .about_us_text{width: 60%;}
 #aboutUs .about_us_btn{width: 20%; bottom: -14%;}
 #aboutUs .about_us_text h2{font-size: 36px;}
 #aboutUs .about_us_text h2:nth-child(2){margin: 20px 0;}
 #aboutUs div p{font-size: 20px;}
-#aboutUs .about_us_btn a{width: 250px; height: 45px; line-height: 45px; display: flex; justify-content: space-around; border-radius: 25px; background-color: #fefefe; border: 1px solid #212121;}
+.msg_box::after{content: ''; position: absolute; width: 1200px; height: 1200px; background-color: #ffffff; right: -200px; top: -200px; transform: rotate(45deg); border-radius: 200px; transition-duration: 1s;}
+.msg_box.active::after{right: -1200px; top: -1200px}
+#aboutUs .about_us_btn a{width: 250px; height: 45px; line-height: 45px; display: flex; justify-content: space-around; border-radius: 25px; background-color: #fefefe; border: 1px solid #212121; opacity: 0; transition-duration: 0.5s;}
 #aboutUs div a img{width: 40px;}
 
 /* midBanner */
-#midBanner{position: relative; height: 100vh; background-size: cover; background-position: right; background-repeat: no-repeat; overflow: hidden;}
-#midBanner ul{position: relative; width: 100%; display: flex; flex-direction: column; justify-content: space-evenly; top: 50%;}
-#midBanner ul li{position: absolute; width: 50%; right: 25%;}
-/*  */
-#midBanner ul li{display: none;}
-#midBanner ul li:first-child{display: block;}
-/*  */
-#midBanner ul li .logo_text{width: 60%; margin: 0 auto; display: flex; justify-content: space-evenly; flex-direction: column;}
-#midBanner ul li .logo_text img{width: 55%; margin: 0 auto;}
-#midBanner ul li .logo_text p{margin: 0 auto; text-align: center; margin-top: 50px; text-shadow: 1px 1px 1px #212121; color: #fefefe; font-size: 1.2em;}
+#midBanner{position: relative; height: 600vh; overflow: hidden;}
+#midBanner .mid_banner{position: relative; width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: end;}
+#midBanner .mid_banner li{position: relative; width: 100%; height: 100vh; }
+/* #midBanner ul li:nth-child(1){position: fixed; width: 100%; height: 100%; } */
+#midBanner .mid_banner li.fix{position: fixed; width: 100%; height: 100%; top: -0.01%;}
+#midBanner .mid_banner li .mid_img{width: 100%; height: 100%;}
+#midBanner .mid_banner>li>.mid_img>img{width: 100%; height: 100%; object-fit: cover;}
+#midBanner .mid_banner li .logo_text{width: 60%; margin: 0 auto; display: flex; justify-content: space-evenly; flex-direction: column; position: absolute; top: 30%; left: 20%; z-index: 1;}
+#midBanner .mid_banner li:first-child .logo_text{opacity: 1;}
+#midBanner .mid_banner li .logo_text img{width: 20%; margin: 0 auto;}
+#midBanner .mid_banner li .logo_text p{margin: 0 auto; text-align: center; margin-top: 50px; text-shadow: 1px 1px 1px #212121; color: #fefefe; font-size: 1.2em;}
+
+.mid_banner_controls{position: fixed; left: calc(50% - 125px); bottom: 5%; display: flex; justify-content: space-evenly; width: 250px;}
+.mid_banner_controls li{width: 20px; height: 20px; background-color: #212121; border-radius: 20px; transition-duration: 0.5s; cursor: pointer;}
+.mid_banner_controls li.long{width: 40px; height: 20px; background-color: #23A03A;}
 
 /* event */
-#event{position: relative; height: 100vh; overflow: hidden;}
+#event{position: relative; height: 100vh; overflow: hidden; background-color: #ffffff; z-index: 1; margin-top: 80px;}
 
 #event .event_name{position: absolute; width: 100%; top: 5%; display: flex; justify-content: center; padding-top: 50px; z-index: 1;}
-#event .event_name .mid_line{content: ''; display: block; width: 300px; height: 1px; position: relative; background-color: #212121; margin: auto 20px;}
+#event .event_name .mid_line{content: ''; display: block; width: 0px; height: 1px; position: relative; background-color: #212121; margin: auto 20px; transition-duration: 0.5s;}
 
-#event .event_img{position: relative; height: 100vh; background-repeat: no-repeat; background-position: right; background-size: cover;}
+#event .event_img{position: relative; height: 100vh; background-image: url('/img/bibigo_seventeen.jpg'); background-repeat: no-repeat; background-position: right; background-size: cover; transition-duration: 1.5s; overflow: hidden;}
 /* 효과 */
-#event .event_img{height: 60vh; max-width: 75%; margin: 20vh auto; border-radius: 500px;}
+/* #event .event_img{height: 60vh; max-width: 75%; margin: 20vh auto; border-radius: 500px;} */
 /* #event .event_img{position: relative; width: 100%; height: 100%;}
 #event .event_img>img{width: 80%; margin: 0 auto; border-radius: 500px;} */
 
-#event .event_img .event_logo{position: absolute; display: flex; flex-direction: column; justify-content: center; max-width: 30%; top: 15%; left: 15%;}
-#event .event_img .event_logo img{height: 70%;}
+#event .event_img .event_logo{position: absolute; display: flex; flex-direction: column; justify-content: center; max-width: 30%; top: 108%; left: 15%;}
+#event .event_img .event_logo img{width: 70%;}
 #event .event_img .event_logo a{margin-top: 15px; display: flex; justify-content: space-evenly; width: 85%; height: 50px; line-height: 50px; font-weight: 700; border-radius: 25px; font-size: 0.8em; background-color: #efefef;}
 #event .event_img .event_logo a img{width: 35px;}
 #event .event_img .event_logo a:hover{color: #fefefe; border-color: #23A03A; background-color: #23A03A; transition-duration: 0.5s;}
@@ -79,6 +78,7 @@
 #newsroom .newsroom_title_wrap a img{opacity: 0; display: none;}
 /* #newsroom .newsroom_title_wrap a:hover div{transition-duration: 1s; width: 110%;} */
 #newsroom .newsroom_title_wrap a:hover img{opacity: 1; transition-duration: 0.5s; display: block;}
+.mobile{display: none;}
 
 /* 피씨 */
 @media screen and (min-width:1201px){
@@ -86,9 +86,79 @@
 
 /* 타블랫 */
 @media screen and (min-width:801px) and (max-width:1200px){
-    
+  /* topBanner */
+  #topBanner ul{position: absolute; top: 15vh; left: 300px; height: 100%; width: 3400px; display: flex; justify-content: space-evenly; overflow: hidden;}
+  #topBanner ul li{position: relative; display: flex; width: 800px; height: 100%; z-index: 2; transition-duration: 0.5s; right: 0;}
+  /* aboutUs */
+  #aboutUs .about_us_text{width: 65%;}
+  #aboutUs .about_us_btn{width: 20%; bottom: -14%;}
+  #aboutUs .about_us_text h2{font-size: 1.5em;}
+  #aboutUs div>p{font-size: 1.1em; margin-top: 20px;}
+  #aboutUs .about_us_btn a{width: 170px; height: 40px; line-height: 40px;}
+  #aboutUs .about_us_btn a p{font-size: 1em;}
+  /* event */
+  #event .event_name{width: 100%; top: 8%;}
+  #event .event_img .event_logo{bottom: 20%; left: 15%;}
+  #event .event_img .event_logo img{width: 100%;}
+  #event .event_img .event_logo a{width: 100%; height: 40px; line-height: 40px; font-size: 0.8em;}
+  #event .event_img .event_logo a img{width: 35px;}
+  #event .event_img .event_logo a:hover{color: #fefefe; border-color: #23A03A; background-color: #23A03A; transition-duration: 0.5s;}
 }
 
 /* 스마트폰 */
 @media screen and (max-width:800px){
+  /* topBanner */
+  #topBanner .top_text{position: relative; font-weight: 500; font-size: 1.2em; text-align: center; left: 0;}
+  #topBanner ul{top: 15vh; left: 0; width: 1510px; justify-content: space-around;}
+  #topBanner ul li{position: relative; display: flex; width: 340px; height: 60%; z-index: 2; transition-duration: 0.5s; right: 0;}
+  #topBanner ul li img{width: 100%; object-fit: cover;}
+  #topBanner .top_benner_controls{position: absolute; bottom: 15%; left: 10%; display: flex; width: 80%; line-height: 30px; justify-content: space-between; z-index: 2;}
+  #topBanner .top_benner_controls p{font-size: 1.2em; color: #efefef; text-shadow: 1px 1px 1px #212121;}
+  #topBanner .top_benner_controls button{width: 30px; height: 30px;}
+
+  /* aboutUs */
+  #aboutUs{flex-direction: column;}
+  #aboutUs div{position: relative; display: flex; flex-direction: column; justify-content: space-around; margin: auto;}
+  #aboutUs .about_us_text{width: 90%; margin-top: 120px;}
+  #aboutUs .about_us_btn{width: 20%; bottom: 0;}
+  #aboutUs .about_us_text h2{font-size: 1.2em;}
+  #aboutUs .about_us_text h2:nth-child(2){margin: 20px 0;}
+  #aboutUs div>p{font-size: 1em; margin-top: 20px;}
+
+  #aboutUs .about_us_btn a{width: 200px; height: 30px; line-height: 30px;}
+  #aboutUs .about_us_btn:hover a{background-color: #FF9700;}
+  #aboutUs div a p{font-size: 1em;}
+  #aboutUs div a img{width: 30px;}
+
+  /* midBanner */
+  #midBanner .mid_banner li .logo_text{width: 80%; margin: 0 auto; display: flex; justify-content: space-evenly; flex-direction: column; position: absolute; top: 30%; left: 10%; z-index: 1;}
+  #midBanner .mid_banner li:first-child .logo_text{opacity: 1;}
+  #midBanner .mid_banner li .logo_text img{width: 40%; margin: 0 auto;}
+  #midBanner .mid_banner li .logo_text p{font-size: 0.9em;}
+
+  /* event */
+  #event{position: relative; height: 100vh; overflow: hidden; background-color: #ffffff; z-index: 1; margin-top: 80px;}
+  #event .event_name h2{font-size: 1.1em;}
+
+  #event .event_img .event_logo{max-width: 80%; top: 108%; left: 10%;}
+  #event .event_img .event_logo img{width: 100%;}
+  #event .event_img .event_logo a{margin: 0 auto; margin-top: 10px; display: flex; justify-content: space-evenly; width: 85%; height: 30px; line-height: 30px; font-weight: 700; border-radius: 25px; font-size: 0.8em; background-color: #efefef;}
+  #event .event_img .event_logo a img{width: 30px;}
+
+  /* newsroom */
+  #newsroom .newsroom_wrap{flex-direction: column; height: 100vh;}
+  #newsroom .newsroom_wrap div{width: 100%; height: 50%;}
+  #newsroom .newsroom_title_wrap{position: absolute; top: 10%; left: 0%; width: 100%; height: 80%; display: flex; flex-direction: row; justify-content: center;}
+  #newsroom .newsroom_title_wrap .newsroom_title{width: 100%; display: flex; justify-content: center; flex-direction: column;}
+  #newsroom .newsroom_title_wrap .newsroom_title h2{font-size: 2em;}
+  #newsroom .newsroom_title_wrap .newsroom_title p{font-size: 2em;}
+  #newsroom .newsroom_title_wrap .newsroom_btn{display: flex; justify-content: space-between; flex-direction: column; position: absolute; height: 80%; top: 10%;}
+  #newsroom .newsroom_title_wrap a{width: 120px;}
+  #newsroom .newsroom_title_wrap a div{width: 100%; margin: 0 auto; height: 40px; display: flex; justify-content: space-around; line-height: 40px; border: 1px solid #212121; box-sizing: border-box; border-radius: 25px; padding: 0 20px;}
+  #newsroom .newsroom_title_wrap a p{font-size: 0.9em; font-weight: 500;}
+  #newsroom .newsroom_title_wrap a img{opacity: 0; display: none; width: 30px; height: 30px;}
+  /* #newsroom .newsroom_title_wrap a:hover div{transition-duration: 1s; width: 110%;} */
+  #newsroom .newsroom_title_wrap a:hover img{display: none;}
+  #newsroom .newsroom_title_wrap a:hover div{background-color: #FF9700; transition-duration: 0.5s; border-color: #FF9700;}
+  .mobile{display: block;}
 }
