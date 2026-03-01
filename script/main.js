@@ -316,9 +316,3 @@ $(function(){
         $('html, body').stop().animate({scrollTop:mid_img},1000);
     })
 
-<<<<<<< HEAD
-=======
-
-
-//mid_banner_img
->>>>>>> 26cded539142492103287c127d56d6633822adec

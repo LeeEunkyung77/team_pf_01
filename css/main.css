@@ -43,7 +43,6 @@
 #midBanner .mid_banner li .logo_text p{margin: 0 auto; text-align: center; margin-top: 50px; text-shadow: 1px 1px 1px #212121; color: #fefefe; font-size: 1.2em;}
 
 .mid_banner_controls{position: fixed; left: calc(50% - 125px); bottom: 5%; display: flex; justify-content: space-evenly; width: 250px;}
-.mid_banner_controls li{width: 20px; height: 20px; background-color: #212121; border-radius: 20px; transition-duration: 0.5s;}
 .mid_banner_controls li{width: 20px; height: 20px; background-color: #212121; border-radius: 20px; transition-duration: 0.5s; cursor: pointer;}
 .mid_banner_controls li.long{width: 40px; height: 20px; background-color: #23A03A;}
 
