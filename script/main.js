@@ -315,4 +315,5 @@ $(function(){
     })
 })
 
+
 //mid_banner_img
