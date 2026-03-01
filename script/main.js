@@ -297,7 +297,6 @@ $(function(){
             $('.cnt').text(next_count+1);
         })
     })
-})
 
     //mid_banner_img
     $('.ctrl').click(function(){
@@ -315,10 +314,8 @@ $(function(){
         $('.mid_banner_img'+long).attr('data-ok','ok');
         $('html, body').stop().animate({scrollTop:mid_img},1000);
     })
+})
 
-<<<<<<< HEAD
-=======
 
 
 //mid_banner_img
->>>>>>> 26cded539142492103287c127d56d6633822adec
