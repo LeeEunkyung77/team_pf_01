@@ -200,3 +200,12 @@
 #newsroom .new_list ul li>div:last-child{background-color: #ffffff; padding: 5px;}
 #newsroom .new_list ul li>div p:first-child{font-size: 0.85em; font-weight: 500; margin-bottom: 10px;}
 #newsroom .new_list ul li>.news_text p:first-child span{margin-left: 20px;}
+
+/* PC */
+@media screen and (min-width:1201px){}
+
+/* 태블릿 */
+@media screen and (min-width:801px) and (max-width:1200px){}
+
+/* 스마트폰 */
+@media screen and (max-width:800px){}

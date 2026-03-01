@@ -54,11 +54,11 @@ $(function(){
         if(winWidth>1200){
             $('html,body').animate({scrollTop:winHeight*num},500);
         }else if(winWidth>800 && winWidth<1201){
-            $('html,body').animate({scrollTop:800*num},500);
+            $('html,body').animate({scrollTop:winHeight*num},500);
         }else if(winWidth>600 && winWidth<801){
-            $('html,body').animate({scrollTop:640*num},500);
+            $('html,body').animate({scrollTop:winHeight*num},500);
         }else{
-            $('html,body').animate({scrollTop:360*num},500);
+            $('html,body').animate({scrollTop:winHeight*num},500);
         }
     }
 
