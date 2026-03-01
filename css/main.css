@@ -1,7 +1,7 @@
-* {
+/* * {
   outline: 1px solid red;
-  /* 좌우 스크롤 생겼을때 부분 확인 할 수 있는 코드 */
-}
+  /* 좌우 스크롤 생겼을때 부분 확인 할 수 있는 코드
+} */
 
 /* topBanner */
 #topBanner{position: relative; height: 100vh; background-size: cover; background-position: right; background-repeat: no-repeat; overflow: hidden;background-image: url('/img/TopBenner_0.jpg'); transition-duration: 0.5s; z-index: 1;}
