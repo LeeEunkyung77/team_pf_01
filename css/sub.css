@@ -89,18 +89,28 @@
 /* INVESTORS */
 /* investors */
 #investors{position: relative;}
-#investors .investors_bg{position: relative; width: 100%; height: calc(100vh + 80px); background-image: url('/img/investors_overview.jpg'); background-size: cover; background-position: right; background-repeat: no-repeat; align-items: stretch; background-attachment: fixed;}
-#investors .investors_bg h2{width: 100%; height: 100%; text-align: center; display: flex; flex-direction: column; justify-content: center; color: #ededed; text-shadow: 1px 1px 1px #212121; font-size: 4em;}
-/* investors_item */
-#investors_item{position: relative; width: 85%; margin: 0 auto; margin-top: -80px; padding: 30px 0; background-image: url('/img/stock_information.png'); background-position: right; background-size:contain; background-repeat: no-repeat; background-color: #ededed; }
-#investors_item .investors_info{position: relative; width: 92%; margin: 0 auto; display: flex; flex-direction: column;display: flex; flex-direction: column; flex-wrap: wrap;}
-#investors_item .investors_info h4{font-size: 1.6em; line-height: 40px;}
-#investors_item .investors_info>div{width: 92%; display: flex; justify-content: space-between; height: 50%; line-height: 100%; text-align:justify; margin: 30px 0;}
-#investors_item .investors_info>div>p{ font-size: 1.6em; line-height: 20px;}
-#investors_item .investors_info>div>p:nth-child(2){font-size: 4em;}
-#investors_item .investors_info>div>div{display: flex; justify-content: space-evenly; flex-direction: column;}
-#investors_item .investors_info>div>div>div{display: flex; margin: 10px 0;}
-#investors_item .investors_info>div>div>div img{width: 20px; height: 20px;}
+#investors .investors_bg{position: relative; width: 100%; height: calc(100vh + 80px); background-image: url('/img/investors_overview.jpg'); background-size: cover; background-position: right top; background-repeat: no-repeat; align-items: stretch; background-attachment: fixed;}
+#investors .investors_bg h2{position: relative; width: 100%; height: 100%; text-align: center; display: flex; flex-direction: column; justify-content: center; font-size: 4em; color:#212121;}
+/* 그라데이션 채워지는 텍스트 */
+#investors .investors_bg h2::before{ content: attr(data-text); position: absolute; left:0; top:calc(50% - 48px); width:100%; height:100%; background: linear-gradient(to right, #ededed 50%, #212121 50%); background-size:200% 100%; background-position:right; -webkit-background-clip:text; color:transparent; animation:textFill 3s forwards;}
+#investors .investors_bg h2.active{
+  animation:textFill 3s forwards;
+}
+@keyframes textFill{
+  to{
+    background-position:left;
+  }
+}
+/* investorsItem */
+#investorsItem{position: relative; width: 85%; margin: 0 auto; margin-top: -80px; padding: 30px 0; background-image: url('/img/stock_information.png'); background-position: right top; background-size:contain; background-repeat: no-repeat; background-color: #ededed; }
+#investorsItem .investors_info{position: relative; width: 92%; margin: 0 auto; display: flex; flex-direction: column;display: flex; flex-direction: column; flex-wrap: wrap;}
+#investorsItem .investors_info h4{font-size: 1.6em; line-height: 40px;}
+#investorsItem .investors_info>div{width: 92%; display: flex; justify-content: space-between; height: 50%; line-height: 100%; text-align:justify; margin: 30px 0;}
+#investorsItem .investors_info>div>p{ font-size: 1.6em; line-height: 20px;}
+#investorsItem .investors_info>div>p:nth-child(2){font-size: 4em;}
+#investorsItem .investors_info>div>div{display: flex; justify-content: space-evenly; flex-direction: column;}
+#investorsItem .investors_info>div>div>div{display: flex; margin: 10px 0;}
+#investorsItem .investors_info>div>div>div img{width: 20px; height: 20px;}
 /* presentation */
 #presentation{position: relative; width: 85%; margin: 40px auto; border: 1px solid #dedede; box-sizing: border-box; display: flex; justify-content: space-between;}
 #presentation .presentation_ext{position: relative; margin: 30px 4%; display: flex; flex-direction: column; justify-content: space-between;}
@@ -127,23 +137,22 @@
 #highlight .highlight_content>div div h5 span{font-size: 0.8em; font-weight: 400;}
 #highlight .highlight_content>div div p{font-size: 1.1em; font-weight: 500;}
 #highlight .highlight_content>div div p span{font-size: 3.2em; font-weight: 400;}
-/* investors_list */
-#investors_list{position: relative; width: 85%; margin: 0 auto;}
-#investors_list h4{font-size: 1.4em; margin: 0 10%; margin-top: 40px;}
-
-#investors_list>div{margin: 40px 0; display: flex; justify-content: space-between;}
-#investors_list>div>.schedule{border: 1px solid #dedede; box-sizing: border-box; width: 32%;}
-/* #investors_list>div>div{width: 48.7%;} */
-#investors_list>div>.info_list{display: flex; justify-content: space-between; width: 65%; flex-wrap: wrap;}
-#investors_list>div>.info_list>div{border: 1px solid #dedede; box-sizing: border-box; width: 48%;}
-#investors_list>div>.info_list>.info_3{margin-top: 4%;}
-#investors_list ul{font-size: 1.3em; margin: 20px 10%;}
-#investors_list ul li{margin-bottom: 15px;}
-#investors_list ul li h5{font-weight: 400;}
-#investors_list ul li p{font-size: 0.8em; font-weight: 100;}
-#investors_list ul li a{display: flex; line-height: 20px;}
-#investors_list ul li a img{width: 20px; height: 20px;}
-#investors_list .schedule ul li{margin-bottom: 40px; margin-left: 40px;}
+/* investorsList */
+#investorsList{position: relative; width: 85%; margin: 0 auto;}
+#investorsList h4{font-size: 1.4em; margin: 0 10%; margin-top: 40px;}
+#investorsList>div{margin: 40px 0; display: flex; justify-content: space-between;}
+#investorsList>div>.schedule{border: 1px solid #dedede; box-sizing: border-box; width: 32%;}
+/* #investorsList>div>div{width: 48.7%;} */
+#investorsList>div>.info_list{display: flex; justify-content: space-between; width: 65%; flex-wrap: wrap;}
+#investorsList>div>.info_list>div{border: 1px solid #dedede; box-sizing: border-box; width: 48%;}
+#investorsList>div>.info_list>.info_3{margin-top: 4%;}
+#investorsList ul{font-size: 1.3em; margin: 20px 10%;}
+#investorsList ul li{margin-bottom: 15px;}
+#investorsList ul li h5{font-weight: 400;}
+#investorsList ul li p{font-size: 0.8em; font-weight: 100;}
+#investorsList ul li a{display: flex; line-height: 20px;}
+#investorsList ul li a img{width: 20px; height: 20px;}
+#investorsList .schedule ul li{margin-bottom: 40px; margin-left: 40px;}
 .line::after{content: ""; position: absolute; height: 74%; width: 1px; background-color: #dedede; left: 40px;}
 .line_o::after{content: ""; position: absolute; height: 21%; width: 1px; background-color: #EF151E; left: 40px;}
 .circle::after{content: ""; position: absolute; height: 16px; width: 16px; background-color: #dedede; left: 32px; border-radius: 25px;}
@@ -158,7 +167,7 @@
 #sustainabilityBanner .sustainability_banner{position: relative; display: flex; flex-direction: column; justify-content: center; height: 100%; text-align: center; color: #ededed;}
 #sustainabilityBanner .sustainability_banner h2{font-size: 4em; font-weight: 500; text-shadow: 1px 1px 1px #212121; margin-bottom: 30px;}
 #sustainabilityBanner .sustainability_banner p{font-size: 1.2em; font-weight: 100; text-shadow: 1px 1px 1px #212121;}
-.h_line::after{content: ""; position: absolute; width: 2px; height: 100px; background-color: #EF151E; left: 50%; top: 95vh; z-index: 1;}
+.h_line::after{content: ""; position: absolute; width: 2px; height: 150px; background-color: #EF151E; left: 50%; top: calc(95vh - 35px); z-index: 1;}
 /* .h_line:hover::after{height: 10px; transition-duration: 0.5s; animation-direction: reverse;} */
 /* sustainability_logo */
 #sustainabilityLogo{position: relative; height: 100vh;}
@@ -241,6 +250,47 @@
   #brand div:nth-child(2) ul li{height: 25px;}
   #brand div:nth-child(2) ul li a{line-height: 25px;}
   #brand div:last-child ul{width: 85%;}
+
+  /* INVESTORS */
+  /* investorsItem */
+  #investorsItem{width: 95%; padding: 20px 0;}
+  #investorsItem .investors_info h4{font-size: 1.3em;}
+  #investorsItem .investors_info>div{width: 100%;}
+  #investorsItem .investors_info>div>p{font-size: 1.3em;}
+  #investorsItem .investors_info>div>p:nth-child(2){font-size: 2.7em;}
+  /* presentation */
+  #presentation{width: 95%;}
+  #presentation .presentation_ext>h5{font-size: 1.2em;}
+  #presentation .presentation_ext div h4{font-size: 1.3em;}
+  #presentation .presentation_ext a p{font-size: 1.1em; line-height: 30px;}
+  #presentation .presentation_ext a img{width: 30px; height: 30px;}
+  #presentation .presentation_ext a h5{font-size: 1.3em; font-weight: 500;}
+  /* highlight */
+  #highlight{width: 95%;}
+  #highlight .highlight_content{margin: 20px auto;}
+  #highlight .highlight_content>div h4{font-size: 1.3em; line-height: 30px;}
+  #highlight .highlight_content>div img{height: 30px; width: 30px;}
+  #highlight .highlight_content>div div h5{font-size: 1.2em;}
+  #highlight .highlight_content>div div p span{font-size: 2.7em;}
+  /* investorsList */
+  #investorsList{width: 95%;}
+  #investorsList h4{font-size: 1.3em; margin: 0 10%; margin-top: 30px;}
+  #investorsList>div{margin: 30px 0;}
+  #investorsList>div>.info_list{display: flex; justify-content: space-between; width: 65%; flex-wrap: wrap;}
+  #investorsList ul{font-size: 1.1em; margin: 20px 7%;}
+  #investorsList ul li{margin-bottom: 15px;}
+  #investorsList ul li h5{font-weight: 400;}
+  #investorsList ul li p{font-size: 0.8em; font-weight: 100;}
+  #investorsList ul li a{display: flex; line-height: 20px;}
+  #investorsList ul li a img{width: 20px; height: 20px;}
+  #investorsList .schedule ul li{margin-bottom: 30px; margin-left: 20px;}
+  .line::after{content: ""; position: absolute; height: 65%; width: 1px; background-color: #dedede; left: 20px;}
+  .line_o::after{left: 20px;}
+  .circle::after{left: 12px;}
+  .circle0::after{top: 20%; background-color: #ffffff; border: 3px solid #EF151E; box-sizing: border-box;}
+  .circle1::after{top: 38%;}
+  .circle2::after{top: 55%;}
+  .circle3::after{top: 73%;}
 }
 
 /* 스마트폰 */
@@ -312,4 +362,73 @@
   #brand div:last-child ul li div a img{position: relative; width: 70%; padding: 40% 40px; margin-top: -100%;}
   #brand div:last-child ul li div:hover>img{transform: scale(1.1); transition-duration: 0.5s;}
 
+  /* INVESTORS */
+  /* investors */
+  #investors .investors_bg h2{position: relative; width: 100%; height: 100%; text-align: center; display: flex; flex-direction: column; justify-content: center; font-size: 3em; color:#212121;}
+  /* 그라데이션 채워지는 텍스트 */
+  #investors .investors_bg h2::before{top:calc(50% - 40px);}
+  /* investorsItem */
+  #investorsItem{width: 95%;}
+  #investorsItem .investors_info{flex-direction: column;}
+  #investorsItem .investors_info h4{font-size: 1.2em; text-align: center; line-height: 30px;}
+  #investorsItem .investors_info>div{line-height: 20px; text-align:justify; margin: 15px 0; flex-direction: column;}
+  #investorsItem .investors_info>div>p{ font-size: 1.2em; text-align: center; line-height: 20px;}
+  #investorsItem .investors_info>div>p:nth-child(2){font-size: 2.5em; margin: 15px 0;}
+  #investorsItem .investors_info>div>div{flex-direction: row;}
+  #investorsItem .investors_info>div>div{margin-top: 30px;}
+  #investorsItem .investors_info>div>div:last-child{margin-top: 0px;}
+  #investorsItem .investors_info>div>div>p{text-align: center; margin-top: 15px; height: 20px; line-height: 20px;}
+  #investorsItem .investors_info>div>div>div{display: flex; margin: 10px 0; justify-content: center; height: 20px; line-height: 30px;}
+  #investorsItem .investors_info>div>div>div img{width: 15px; height: 15px; margin-top: 7px;}
+  /* presentation */
+  #presentation{width: 95%;}
+  #presentation .presentation_ext{position: relative; margin: 15px 4%;}
+  #presentation .presentation_ext>h5{font-size: 1.1em; font-weight: 500; margin-top: 10px;}
+  #presentation .presentation_ext div{display: flex; margin: 20px 0;}
+  #presentation .presentation_ext div:first-child img{width: 30px; height: 30px; margin-left: 5px; margin-top: 5px;}
+  #presentation .presentation_ext div h4{font-size: 1.3em;}
+  #presentation .presentation_ext div:last-child{margin-top: 30px;}
+  #presentation .presentation_ext a p{font-size: 1.1em; line-height: 20px; margin-right: 5px;}
+  #presentation .presentation_ext a{display: flex; margin-top: 15px;}
+  #presentation .presentation_ext a:last-child{margin-top: 30px;}
+  #presentation .presentation_ext a img{width: 25px; height: 25px; margin-top: 5px;}
+  #presentation .presentation_ext a:last-child img{width: 20px; height: 20px;}
+  #presentation .presentation_ext a h5{font-size: 1.1em; font-weight: 500;}
+  #presentation .presentation_pdf{display: none;}
+  /* highlight */
+  #highlight{width: 95%;}
+  #highlight .highlight_content{display: flex; flex-direction: column; margin: 30px auto; width: 92%;}
+  #highlight .highlight_content>div:first-child{flex-direction: row;}
+  #highlight .highlight_content>div{display: flex; justify-content: center; flex-direction: column; margin: 10px 0;}
+  #highlight .highlight_content>div h4{font-size: 1.3em; line-height: 30px; text-align: center;}
+  #highlight .highlight_content>div img{height: 30px; width: 30px;}
+  #highlight .highlight_content>div>div{display: flex; justify-content: space-between; flex-direction: column;}
+  #highlight .highlight_content>div:last-child{justify-content: space-between;}
+  #highlight .highlight_content>div div h5{font-size: 1.2em; font-weight: 500; text-align: center; margin-top: 10px;}
+  #highlight .highlight_content>div div h5 span{font-size: 0.8em; font-weight: 400; text-align: center;}
+  #highlight .highlight_content>div div p{font-size: 1em; font-weight: 500; text-align: center;}
+  #highlight .highlight_content>div div p span{font-size: 2.5em; font-weight: 400; text-align: center;}
+  /* investorsList */
+  #investorsList{width: 95%;}
+  #investorsList h4{font-size: 1.2em; margin: 0 10%; margin-top: 40px;}
+  #investorsList>div{flex-direction: column;}
+  #investorsList>div>.schedule{width: 100%;}
+  #investorsList>div>.info_list{width: 100%;}
+  #investorsList>div>.info_list h4{margin-top: 20px;}
+  #investorsList>div>.info_list>div{width: 100%; margin-top: 5%;}
+  #investorsList>div>.info_list>.info_3{margin-top: 5%;}
+  #investorsList ul{font-size: 1.2em; margin: 20px 10%;}
+  #investorsList ul li{margin-bottom: 15px;}
+  #investorsList ul li h5{font-weight: 400;}
+  #investorsList ul li p{font-size: 0.8em; font-weight: 100;}
+  #investorsList ul li a{display: flex; line-height: 20px;}
+  #investorsList ul li a img{width: 20px; height: 20px;}
+  #investorsList .schedule ul li{margin-bottom: 40px; margin-left: 40px;}
+  .line::after{content: ""; position: absolute; height: 28%; width: 1px; background-color: #dedede; left: 40px;}
+  .line_o::after{content: ""; position: absolute; height: 8.6%; width: 1px; background-color: #EF151E; left: 40px;}
+  .circle::after{content: ""; position: absolute; height: 16px; width: 16px; background-color: #dedede; left: 32px; border-radius: 25px;}
+  .circle0::after{top: 8.3%; background-color: #ffffff; border: 3px solid #EF151E; box-sizing: border-box;}
+  .circle1::after{top: 16.3%;}
+  .circle2::after{top: 24%;}
+  .circle3::after{top: 31.6%;}
 }

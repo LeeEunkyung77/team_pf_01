@@ -164,9 +164,6 @@ $(function(){
     let crewCnt = 1
     let leftMove = 1
     
-    
-    
-    
     $(window).resize(function(){ //화면의 크기가 변하면
         winHeight = $(window).height(); // 화면의 높이를 다시 받고
         $('html').scrollTop(winHeight*wheelNum);

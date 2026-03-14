@@ -11,27 +11,148 @@
 <body>
     <section id="investors">
         <div class="investors_bg">
-            <h2>INVESTORS</h2>
+            <h2 data-text="INVESTORS">INVESTORS</h2>
         </div>
     </section>
-    <section id="investors_item">
+    <section id="investorsItem">
+        <script>
+            // DOMContentLoaded : HTML 문서의 DOM 구조가 완전히 만들어졌을 때 실행된다. img / css 로딩까지 기다리는 window.onload보다 빠르다.
+            // 목적 → JS가 HTML 요소를 찾을 수 있도록 보장
+            document.addEventListener("DOMContentLoaded", function(){
+
+                // querySelector : document 안에서 CSS 선택자로 요소를 찾는다.
+                // target → 화면에 들어왔는지 감지할 기준 요소
+                // → #investorsItem이 viewport에 들어오면 숫자 애니메이션을 시작할 예정
+                const target = document.querySelector("#investorsItem");
+
+                // querySelectorAll : 여러 요소를 찾을 때 사용
+                // 반환값 → NodeList (배열처럼 사용 가능)
+                // numbers → 숫자가 올라가야 하는 모든 요소
+                // → .won_num span들을 전부 가져옴
+                const numbers = document.querySelectorAll(".won_num");
+
+                // 천 단위 콤마 함수
+                // 사용 기술 → 정규식 (RegExp)
+                // /\B(?=(\d{3})+(?!\d))/g → 숫자 뒤에서 3자리마다 콤마 삽입
+                function comma(num){
+                    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g,",");
+                }
+
+                // 숫자 애니메이션 함수 : 하나의 숫자 요소(el)를 받아서 0 → 목표 숫자까지 증가시키는 역할
+                // 사용 기술 → requestAnimationFrame
+                // → 브라우저가 화면 그리는 타이밍에 맞춰 애니메이션을 실행
+                // → setInterval보다 부드럽고 성능 좋음
+                function animateNumber(el){
+                    // dataset : HTML의 data-* 속성을 읽는 방법
+                    // HTML : data-count="222500"
+                    // JS : el.dataset.count
+
+                    // 시작 숫자
+                    const start = parseFloat(el.dataset.from) || 0;
+                    // 목표 숫자
+                    const end = parseFloat(el.dataset.count);
+                    // 애니메이션 시간(ms)
+                    const duration = parseInt(el.dataset.duration) || 500;
+
+                    // performance.now() : 현재 시간을 ms 단위로 반환, Date.now()보다 정밀함
+                    // 목적 → 애니메이션 진행률 계산
+                    const startTime = performance.now();
+
+                    // update 함수 : requestAnimationFrame이 호출할 함수, 매 프레임마다 숫자를 업데이트
+                    // now → 현재 시간
+                    function update(now){
+                        // progress 계산 : (현재시간 - 시작시간) / 전체시간
+                        // 결과 → 0 ~ 1 사이 값 (예) 0.2 → 20% 진행, 0.7 → 70% 진행
+                        const progress = Math.min((now - startTime) / duration, 1);
+
+                        // 현재 표시할 숫자 계산
+                        // 공식 : start + (end - start) * progress
+                        //현재값 = 시작값 + (전체 이동거리 × 진행률)
+                        // 예) 시작:0, 목표숫자:100, progress : 0.5 = 결과 : 50
+                        const value = start + (end - start) * progress;
+
+                        // 소수점 처리
+                        // end % 1 !== 0 → 소수점 숫자인지 확인
+                        //
+                        // 예) 3.47 → true / 8000 → false
+                        if(end % 1 !== 0){
+                            // 소수점 유지
+                            el.textContent = value.toFixed(2);
+                        }else{
+                            // 정수 → 콤마 처리
+                            el.textContent = comma(Math.floor(value));
+                        }
+
+                        // 애니메이션 반복 : progress < 1 → 아직 애니메이션 진행 중
+                        // requestAnimationFrame(update) → 다음 프레임에서 다시 실행
+                        // 결과 → 숫자가 계속 증가
+                        if(progress < 1){
+                            requestAnimationFrame(update);
+                        }
+                    }
+
+                    // 애니메이션 시작 : 브라우저가 다음 프레임에서 update 함수를 실행
+                    requestAnimationFrame(update);
+                }
+
+                // 숫자 초기화 함수 → 요소가 화면 밖으로 나가면 실행
+                // 역할 → 숫자를 다시 0으로 돌림
+                // 효과 → 다시 화면에 들어오면 애니메이션이 다시 실행됨
+                function resetNumbers(){
+                    numbers.forEach(num=>{
+                        num.textContent = "0";
+                    });
+                }
+
+                // IntersectionObserver : 요소가 화면에 보이는지 감지하는 API
+                // 장점 → scroll 이벤트보다 성능 좋음
+                //      → 브라우저가 최적화해서 처리
+                // entries → 감지된 요소 정보
+                const observer = new IntersectionObserver(function(entries){
+
+                    entries.forEach(entry=>{
+                        // entry.isIntersecting :
+                        // true → 요소가 화면에 보임
+                        // false → 요소가 화면 밖
+                        if(entry.isIntersecting){
+                            // 모든 숫자 애니메이션 실행
+                            numbers.forEach(num=>{
+                                animateNumber(num);
+                            });
+                        }
+                        else{
+                            // 화면 밖 → 숫자 초기화
+                            resetNumbers();
+                        }
+                    });
+                },
+                {
+                    // threshold : 요소가 몇 % 보일 때 이벤트를 발생시킬지 설정
+                    threshold:0.4 // ==> 0.4 → 요소가 40% 보이면 실행
+                });
+
+                // observer.observe : target 요소 감시 시작
+                // 결과 → #investorsItem이 화면에 들어오고 나갈 때 observer가 자동으로 감지
+                observer.observe(target);
+            });
+        </script>
         <div class="investors_info">
             <h4>주가 정보</h4>
             <div>
                 <p>CJ제일제당 보통주 (097950)</p>
-                <p class="blue"><span>222,500</span>원</p>
+                <p class="blue"><span class="won_num" data-from="0" data-count="222500" data-duration="500">0</span>원</p>
                 <div>
                     <p>전일대비</p>
                     <div>
                         <img src="" alt="under_icon">
-                        <p class="blue"><span>8,000</span>원</p>
+                        <p class="blue"><span class="won_num" data-from="0" data-count="8000" data-duration="500">0</span>원</p>
                     </div>
                 </div>
                 <div>
                     <p>등락률</p>
                     <div>
                         <img src="" alt="under_icon">
-                        <p class="blue">-<span>3.47</span>%</p>
+                        <p class="blue">-<span class="won_num" data-from="0" data-count="3.47" data-duration="500">0</span>%</p>
                     </div>
                 </div>
             </div>
@@ -67,6 +188,74 @@
         </div>
     </section>
     <section id="highlight">
+        <script>
+
+            document.addEventListener("DOMContentLoaded", function(){
+
+            const target = document.querySelector("#highlight");
+
+            const numbers = document.querySelectorAll(".won_num");
+
+            function comma(num){
+                return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g,",");
+            }
+
+            function animateNumber(el){
+
+                const start = parseFloat(el.dataset.from) || 0;
+                const end = parseFloat(el.dataset.count);
+                const duration = parseInt(el.dataset.duration) || 500;
+
+                const startTime = performance.now();
+
+                function update(now){
+
+                    const progress = Math.min((now - startTime) / duration, 1);
+
+                    const value = start + (end - start) * progress;
+
+                    if(end % 1 !== 0){
+                        // 소수점 유지
+                        el.textContent = value.toFixed(2);
+                    }else{
+                        // 정수 → 콤마 처리
+                        el.textContent = comma(Math.floor(value));
+                    }
+
+                    if(progress < 1){
+                        requestAnimationFrame(update);
+                    }
+                }
+
+                requestAnimationFrame(update);
+            }
+
+            function resetNumbers(){
+                numbers.forEach(num=>{
+                    num.textContent = "0";
+                });
+            }
+
+            const observer = new IntersectionObserver(function(entries){
+
+                entries.forEach(entry=>{
+                    if(entry.isIntersecting){
+                        numbers.forEach(num=>{
+                            animateNumber(num);
+                        });
+                    }
+                    else{
+                        resetNumbers();
+                    }
+                });
+            },
+            {
+                threshold:0.4
+            });
+
+            observer.observe(target);
+        });
+        </script>
         <div class="highlight_content">
             <div>
                 <h4>재무 하이라이트</h4>
@@ -75,20 +264,20 @@
             <div>
                 <div>
                     <h5>매출액 <span class="gery">(2024년)</span></h5>
-                    <p><span class="red">293,591</span> 억 원</p>
+                    <p><span class="red won_num" data-from="0" data-count="293591" data-duration="500">0</span> 억 원</p>
                 </div>
                 <div>
                     <h5>영업이익 <span class="gery">(2024년)</span></h5>
-                    <p><span>15,530</span> 억 원</p>
+                    <p><span class="won_num" data-from="0" data-count="15530" data-duration="500">0</span> 억 원</p>
                 </div>
                 <div>
                     <h5>자산총액 <span class="gery">(2024년)</span></h5>
-                    <p><span>301,500</span> 억 원</p>
+                    <p><span class="won_num" data-from="0" data-count="301500" data-duration="500">0</span> 억 원</p>
                 </div>
             </div>
         </div>
     </section>
-    <section id="investors_list">
+    <section id="investorsList">
         <div>
             <div class="schedule">
                 <h4>일정</h4>
