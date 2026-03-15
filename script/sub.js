@@ -41,15 +41,6 @@ $(function(){
         CJaboutUsListTop = $('#CJaboutUsList').offset().top;
         out_list1Top = $('.out_list1').offset().top;
         out_list2Top = $('.out_list2').offset().top;
-        CJaboutUsList2Top = $('#CJaboutUsList2').offset().top;
-        in_list1Top = $('.in_list1').offset().top+$('.in_list1').height;
-        in_list2Top = $('.in_list2').offset().top;
-        in_list3Top = $('.in_list3').offset().top;
-        mvcTop = $('#mvc').offset().top;
-        mvc_list1Top = $('.mvc_list1').offset().top;
-        mvc_list2Top = $('.mvc_list2').offset().top;
-        mvc_list3Top = $('.mvc_list3').offset().top;
-        aboutSummaryTop = $('#aboutSummary').offset().top;
     })
 
     function wheelEvent(num){
@@ -261,13 +252,11 @@ $(function(){
             setTimeout(function(){
                 $('.brand_list3 p span').css('color','#FF9700')
             },300)
-            $('.brands li').css('opacity','0');
             console.log('.brand_list3');
         }
+        
         if(scrollTop>brandTop-200){
             let idx = 0;
-            
-            setInterval(brand, 200);
             
             function brand(){
                 let brands = $('.brands li');
@@ -276,11 +265,20 @@ $(function(){
                 idx++;
                 if(idx >= brands.length){
                     idx = brands.length;
+                    clearInterval(brandStart, 200);
                 }
             }
+
+            let brandStart = setInterval(brand, 200);
+            if(idx >= brands.length){
+                idx = brands.length;
+                clearInterval(brandStart, 200);
+            }
+        }else{
+            $('.brands li').css('opacity','0');
         }
     });
-
+    
     $(document).ready(function(){
         setTimeout(function(){
             $('.brand_banner').css('width','80%').css('height','80%').css('border-radius', '25rem');
@@ -459,5 +457,24 @@ $(function(){
         setTimeout(function(){
             $(".white_reveal").addClass("active");
         },100);
+    })
+
+    $('.left').click(function(){
+        $('.new_list ul').css('margin-left','0%');
+        $('.left').hover(function(){
+            $(this).css('opacity','0.5');
+        })
+        $('.right').hover(function(){
+            $(this).css('opacity','0.8');
+        })
+    })
+    $('.right').click(function(){
+        $('.new_list ul').css('margin-left','-100%');
+        $('.right').hover(function(){
+            $(this).css('opacity','0.5');
+        })
+        $('.left').hover(function(){
+            $(this).css('opacity','0.8');
+        })
     })
 });

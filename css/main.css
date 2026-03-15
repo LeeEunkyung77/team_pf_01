@@ -37,32 +37,29 @@
 #midBanner .mid_banner li.fix{position: fixed; width: 100%; height: 100%; top: -0.01%;}
 #midBanner .mid_banner li .mid_img{width: 100%; height: 100%;}
 #midBanner .mid_banner>li>.mid_img>img{width: 100%; height: 100%; object-fit: cover;}
-#midBanner .mid_banner li .logo_text{width: 60%; margin: 0 auto; display: flex; justify-content: space-evenly; flex-direction: column; position: absolute; top: 30%; left: 20%; z-index: 1;}
+#midBanner .mid_banner li .logo_text{width: 60%; margin: 0 auto; display: flex; justify-content: space-evenly; flex-direction: column; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1;}
 #midBanner .mid_banner li:first-child .logo_text{opacity: 1;}
 #midBanner .mid_banner li .logo_text img{width: 20%; margin: 0 auto;}
 #midBanner .mid_banner li .logo_text p{margin: 0 auto; text-align: center; margin-top: 50px; text-shadow: 1px 1px 1px #212121; color: #fefefe; font-size: 1.2em;}
-
-.mid_banner_controls{position: fixed; left: calc(50% - 125px); bottom: 5%; display: flex; justify-content: space-evenly; width: 250px;}
+.mid_banner_controls{position: fixed; left: 50%; bottom: 5%; transform: translateX(-50%); display: flex; justify-content: space-evenly; width: 250px;}
 .mid_banner_controls li{width: 20px; height: 20px; background-color: #212121; border-radius: 20px; transition-duration: 0.5s;}
 .mid_banner_controls li{width: 20px; height: 20px; background-color: #212121; border-radius: 20px; transition-duration: 0.5s; cursor: pointer;}
 .mid_banner_controls li.long{width: 40px; height: 20px; background-color: #23A03A;}
 
 /* event */
 #event{position: relative; height: 100vh; overflow: hidden; background-color: #ffffff; z-index: 1; margin-top: 80px;}
-
 #event .event_name{position: absolute; width: 100%; top: 5%; display: flex; justify-content: center; padding-top: 50px; z-index: 1;}
 #event .event_name .mid_line{content: ''; display: block; width: 300px; height: 1px; position: relative; background-color: #212121; margin: auto 20px;}
-
 #event .event_img{position: relative; height: 100vh; background-image: url('/img/bibigo_seventeen.jpg'); background-repeat: no-repeat; background-position: right; background-size: cover; transition-duration: 1s;}
 /* 효과 */
 /* #event .event_img{height: 60vh; max-width: 75%; margin: 20vh auto; border-radius: 500px;} */
 /* #event .event_img{position: relative; width: 100%; height: 100%;}
 #event .event_img>img{width: 80%; margin: 0 auto; border-radius: 500px;} */
 
-#event .event_img .event_logo{position: absolute; display: flex; flex-direction: column; justify-content: center; max-width: 30%; top: 15%; left: 15%;}
-#event .event_img .event_logo img{height: 70%;}
-#event .event_img .event_logo a{margin-top: 15px; display: flex; justify-content: space-evenly; width: 85%; height: 50px; line-height: 50px; font-weight: 700; border-radius: 25px; font-size: 0.8em; background-color: #efefef;}
-#event .event_img .event_logo a img{width: 35px;}
+#event .event_img .event_logo{position: absolute; display: flex; flex-direction: column; justify-content: center; max-width: 30%; top: 100%; left: 25%; transform: translate(-50%, -50%); transition-duration: 0.5s; opacity: 0;}
+#event .event_img .event_logo>img{width : 80%; margin: 0 auto;}
+#event .event_img .event_logo a{margin: 0 auto; margin-top: 15px; display: flex; justify-content: space-evenly; width: 300px; height: 50px; line-height: 50px; font-weight: 700; border-radius: 25px; font-size: 0.8em; background-color: #efefef; text-align: center;}
+#event .event_img .event_logo a img{height: 50px;}
 #event .event_img .event_logo a:hover{color: #fefefe; border-color: #23A03A; background-color: #23A03A; transition-duration: 0.5s;}
 
 /* newsroom */
@@ -87,7 +84,12 @@
 
 /* 타블랫 */
 @media screen and (min-width:801px) and (max-width:1200px){
-    
+  /* event */
+
+  #event .event_img .event_logo{top: 50%; left: 30%;}
+  #event .event_img .event_logo a{width: 250px;}
+  #event .event_img .event_logo a img{height: 50px;}
+  #event .event_img .event_logo a:hover{color: #fefefe; border-color: #23A03A; background-color: #23A03A; transition-duration: 0.5s;}
 }
 
 /* 스마트폰 */
@@ -108,7 +110,7 @@
   #aboutUs .about_us_btn{width: 20%; bottom: 0;}
   #aboutUs .about_us_text h2{font-size: 1.2em;}
   #aboutUs .about_us_text h2:nth-child(2){margin: 20px 0;}
-  #aboutUs div>p{font-size: 1em; margin-top: 20px;}
+  #aboutUs div>p{font-size: 0.9em; margin-top: 20px;}
 
   #aboutUs .about_us_btn a{width: 200px; height: 30px; line-height: 30px;}
   #aboutUs .about_us_btn:hover a{background-color: #FF9700;}
@@ -116,19 +118,18 @@
   #aboutUs div a img{width: 30px;}
 
   /* midBanner */
-  #midBanner .mid_banner li .logo_text{width: 80%; margin: 0 auto; display: flex; justify-content: space-evenly; flex-direction: column; position: absolute; top: 30%; left: 10%; z-index: 1;}
+  #midBanner .mid_banner li .logo_text{width: 100%; margin: 0 auto; display: flex; justify-content: space-evenly; flex-direction: column; position: absolute; z-index: 1;}
   #midBanner .mid_banner li:first-child .logo_text{opacity: 1;}
   #midBanner .mid_banner li .logo_text img{width: 40%; margin: 0 auto;}
   #midBanner .mid_banner li .logo_text p{font-size: 0.9em;}
 
   /* event */
-  #event{position: relative; height: 100vh; overflow: hidden; background-color: #ffffff; z-index: 1; margin-top: 80px;}
-  #event .event_name h2{font-size: 1.1em;}
 
-  #event .event_img .event_logo{max-width: 80%; top: 108%; left: 10%;}
-  #event .event_img .event_logo img{width: 100%;}
-  #event .event_img .event_logo a{margin: 0 auto; margin-top: 10px; display: flex; justify-content: space-evenly; width: 85%; height: 30px; line-height: 30px; font-weight: 700; border-radius: 25px; font-size: 0.8em; background-color: #efefef;}
-  #event .event_img .event_logo a img{width: 30px;}
+  #event .event_name h2{font-size: 1.1em;}
+  #event .event_img .event_logo{width: 100%; left: 50%; max-width: 70%;}
+  #event .event_img .event_logo>img{width: 100%; object-position: right; object-fit: cover;}
+  #event .event_img .event_logo a{margin: 0 auto; margin-top: 10px; display: flex; justify-content: space-evenly; width: 100%; height: 40px; line-height: 40px; font-weight: 700; border-radius: 25px; font-size: 0.8em; background-color: #efefef;}
+  #event .event_img .event_logo a img{width: 40px;}
 
   /* newsroom */
   #newsroom .newsroom_wrap{flex-direction: column; height: 100vh;}
