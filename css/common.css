@@ -42,7 +42,6 @@
 /* 3뎁스 */
 .sub_menu_list_wrap .sub_menu_list li.sub_more::after{content: ""; display: block; position: absolute; width: 10px; height: 2px; background-color: black; right: 8px; top: 50%; transform: translateY(-50%); transition-duration: 0.5s;}
 .sub_menu_list_wrap .sub_menu_list li.sub_more::before{content: ""; display: block; position: absolute; width: 2px; height: 10px; background-color: black; right: 12px; top: 50%; transform: translateY(-50%); transition-duration: 0.5s;}
-/*.sub_menu_list_wrap .sub_menu_list li.sub_more:hover{background-color: #FF9700;}*/
 .sub_menu_list_wrap .sub_menu_list li.sub_more:hover::after{transform: rotate(45deg);}
 .sub_menu_list_wrap .sub_menu_list li.sub_more:hover::before{transform: rotate(-135deg);}
 
