@@ -14,7 +14,7 @@
 #topBanner ul li img{width: 100%; object-fit: cover;}
 #topBanner .top_benner_controls{position: absolute; bottom: 15%; left: 80px; display: flex; width: 300px; line-height: 40px; justify-content: space-between; z-index: 2;}
 #topBanner .top_benner_controls p{font-size: 30px; color: #efefef; text-shadow: 1px 1px 1px #212121;}
-#topBanner .top_benner_controls button{width: 40px; height: 40px;}
+#topBanner .top_benner_controls button{width: 40px; height: 40px; background: none;}
 
 /* aboutUs */
 #aboutUs{position: relative; height: 100vh; display: flex; overflow: hidden; background-color: #ffffff; z-index: 1;}
@@ -39,7 +39,7 @@
 #midBanner .mid_banner>li>.mid_img>img{width: 100%; height: 100%; object-fit: cover;}
 #midBanner .mid_banner li .logo_text{width: 60%; margin: 0 auto; display: flex; justify-content: space-evenly; flex-direction: column; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1;}
 #midBanner .mid_banner li:first-child .logo_text{opacity: 1;}
-#midBanner .mid_banner li .logo_text img{width: 20%; margin: 0 auto;}
+#midBanner .mid_banner li .logo_text img{width: 50%; margin: 0 auto;}
 #midBanner .mid_banner li .logo_text p{margin: 0 auto; text-align: center; margin-top: 50px; text-shadow: 1px 1px 1px #212121; color: #fefefe; font-size: 1.2em;}
 
 .mid_banner_controls{position: fixed; left: calc(50% - 125px); bottom: 5%; display: flex; justify-content: space-evenly; width: 250px;}
@@ -72,11 +72,14 @@
 #newsroom .newsroom_title_wrap .newsroom_title p{font-size: 3.5em;}
 #newsroom .newsroom_title_wrap .newsroom_btn{display: flex; justify-content: space-evenly;}
 #newsroom .newsroom_title_wrap a{width: 200px;}
-#newsroom .newsroom_title_wrap a div{width: 100%; margin: 0 auto; height: 50px; display: flex; justify-content: space-around; line-height: 50px; border: 1px solid #212121; box-sizing: border-box; border-radius: 25px; padding: 0 20px;}
+#newsroom .newsroom_title_wrap a div{width: 100%; margin: 0 auto; height: 50px; display: flex; justify-content: space-around; line-height: 50px; border: 1px solid #212121; box-sizing: border-box; border-radius: 25px; padding: 0 20px; background-color: #ffffff;}
 #newsroom .newsroom_title_wrap a p{font-size: 1.2em; font-weight: 500;}
 #newsroom .newsroom_title_wrap a img{opacity: 0; display: none;}
 /* #newsroom .newsroom_title_wrap a:hover div{transition-duration: 1s; width: 110%;} */
 #newsroom .newsroom_title_wrap a:hover img{opacity: 1; transition-duration: 0.5s; display: block;}
+/*뉴스룸 이미지*/
+#newsroom .newsroom_wrap .newsroom_left{background-image: url('/img/newsroom_left.jpg'); background-repeat: no-repeat; background-position: center;}
+#newsroom .newsroom_wrap .newsroom_right{background-image: url('/img/newsroom_right.jpg'); background-repeat: no-repeat; background-position: center;}
 
 /* 피씨 */
 @media screen and (min-width:1201px){
