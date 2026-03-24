@@ -1,72 +1,86 @@
 /* CJABOUTUS */
 /* CJaboutUsList */
-#CJaboutUsList{position: relative; height: 500vh; min-height: 3000px;}
-#CJaboutUsList>ul{position: relative; display: flex; flex-direction: column;}
-#CJaboutUsList>ul>li{position: relative; height: 100vh; min-height: 600px; display: flex; justify-content: center;}
+#CJaboutUsList{position: relative; height: 200vh; z-index: 2;}
+#CJaboutUsList>ul{position: relative; display: flex; flex-direction: column; overflow: hidden; height: 100%;}
+#CJaboutUsList>ul>li{position: relative; height: 100vh; min-height: 360px; display: flex; justify-content: center; background-color: #ffffff;}
 #CJaboutUsList>ul>li>div{position: relative; display: flex; flex-direction: column; justify-content: center; text-align: center;}
-#CJaboutUsList>ul>li>div h2{font-size: 2.8em; margin-bottom: 30px;}
+#CJaboutUsList>ul>li>div h2{font-size: 2.8em; margin-bottom: 30px; transition-duration: 0.5s;}
 #CJaboutUsList>ul>li>div p{font-size: 1.2em;}
-#CJaboutUsList>ul>li>.inner_list{width: 50%; position: relative;}
-#CJaboutUsList>ul>li>.inner_list>li{height: 100%; display: flex; flex-direction: column; justify-content:end;}
-#CJaboutUsList>ul>li>.inner_list>li div{width: 80%; margin: 20% auto;}
-#CJaboutUsList>ul>li>.inner_list>li div h2{margin-bottom: 20px;}
-#CJaboutUsList>ul>li>.inner_list>li img{width: 100%; height: 100%; object-fit: cover;}
+.v_line{position: absolute; width: 2px; height: 0px; background-color: #EF151E; top: calc(50% - 75px); left: 50%; z-index: 1; transition-duration: 0.5s;}
+.mobile{display: none;}
+/* #CJaboutUsList:hover .v_line::after{height: 150px;} */
+/* CJaboutUsList2 */
+#CJaboutUsList2{position: relative; width: 100%; height: 300vh; display: flex;}
+#CJaboutUsList2 .sticky_wrap{position: sticky; top: 0; width: 100%; height: 100vh; display: flex; overflow: hidden;}
+#CJaboutUsList2 .sticky_wrap_mobile{display: none;}
+#CJaboutUsList2 .inner_list{width: 50%; height: 300%; position: relative; display: flex; flex-direction: column; background-color: transparent; z-index: 1;}
+#CJaboutUsList2 .inner_list>li{height: 100vh; display: flex; flex-direction: column; justify-content:end; position: relative;}
+.fix{position: fixed;}
+#CJaboutUsList2 .inner_list>li div{width: 80%; margin: 20% auto;}
+#CJaboutUsList2 .inner_list>li div h2{margin-bottom: 20px;}
+#CJaboutUsList2 .inner_list>li img{width: 100%; height: 100%; object-fit: cover;}
+.list_up{translate: none; rotate: none; scale: none; transform: translate3d(0px, -66.66%, 0px); transition-duration: 0.5s;}
+.list_down{translate: none; rotate: none; scale: none; transform: translate3d(0px, -0%, 0px); transition-duration: 0.5s;}
+/* #CJaboutUsList2:hover .list_up{transform: translate3d(0px, -0%, 0px);}
+#CJaboutUsList2:hover .list_down{transform: translate3d(0px, -66.66%, 0px);} */
 /* mvc */
-#mvc{position: relative; height: 300vh; min-height: 2400px;}
-#mvc>ul{text-align: center;}
-#mvc>ul>li{height: 100vh; min-height: 800px;}
-#mvc>ul>li>div{display: flex; flex-direction: column; justify-content: end; height: 50%;}
+#mvc{position: relative; height: 300vh; background-color: #ffffff; z-index: 1;}
+#mvc>ul{text-align: center; position: relative; height: 100%;}
+#mvc>ul>li{height:33.3%;}
+#mvc>ul>li>div{display: flex; flex-direction: column; justify-content: center; height: 100%;}
 #mvc>ul>li>div img{width: 60px; height: 60px; margin: 0 auto;}
-#mvc>ul>li>div h2{margin-top: 5%; font-size: 1.5em;}
-#mvc>ul>li>div p{margin-top: 5%; font-size: 2em;}
-#mvc>ul>li:nth-child(3)>div{justify-content: start;}
-#mvc>ul>li:nth-child(3)>div img{width: 60px; height: 60px; margin: 0 auto; margin-top: 40px;}
-#mvc>ul>li:nth-child(3)>div h2{margin-top: 0; font-size: 1.5em;}
-#mvc>ul>li:nth-child(3)>div p{margin-top: 0; font-size: 2em;}
-#mvc>ul>li>div .core_values{position: relative; display: flex; justify-content: space-between; width: 70%; margin: 0 auto; min-height: 300px;}
+#mvc>ul>li>div h2{margin-top: 40px; font-size: 1.5em;}
+#mvc>ul>li>div p{margin-top: 40px; font-size: 2em;}
+#mvc>ul>li:nth-child(3)>div img{width: 60px; height: 60px; margin: 0 auto; margin-top: 40px; margin-bottom: -5%;}
+#mvc>ul>li:nth-child(3)>div h2{margin-bottom: 20px; font-size: 1.5em;}
+#mvc>ul>li:nth-child(3)>div p{font-size: 2em;}
+#mvc>ul>li>div .core_values{position: relative; display: flex; justify-content: space-between; width: 70%; margin: 0 auto;}
 #mvc>ul>li>div .core_values>li{width: 32%; height: 40vh; min-height: 250px; background-position: center; background-repeat: cover; display: flex; flex-direction: column; justify-content: end;}
 #mvc>ul>li>div .core_values>li p{margin-bottom: 20px; margin-left: 20px; margin-right: 20px;}
 #mvc>ul>li>div .core_values>li:first-child p{text-align: left;}
 #mvc>ul>li>div .core_values>li:nth-child(2) p{text-align: center;}
 #mvc>ul>li>div .core_values>li:last-child p{text-align: right;}
+#mvc>ul>li>div .core_values>li p{font-size: 1.3em;}
 #mvc>ul>li>div .core_values>li p span{font-weight: 700;}
-#mvc>ul>li>div .principles{position: relative; margin: 7% 0;}
+#mvc>ul>li>div .principles{position: relative; margin-bottom: 40px;}
 #mvc>ul>li>div .principles>ul{width: 50%; margin: 0 auto; display: flex; justify-content: space-evenly; margin-top: 30px;}
 #mvc>ul>li>div .principles>ul li{width: 120px; height: 120px; border-radius: 100px; display: flex; flex-direction: column; justify-content: end;}
 #mvc>ul>li>div .principles>ul li p{font-size: 1.2em; margin-bottom: 10px;}
 /* about_summary */
-#aboutSummary{position: relative; width: 100%;}
-#aboutSummary .about_summary_wrap{position: relative; width: 90%; height: 900px; margin: 10px auto; display: flex; justify-content: space-between; border-radius: 10rem; background-position: center; background-size: cover;background-image: url('/img/csr_overview.jpg');}
-#aboutSummary .about_summary_wrap a{display: flex; flex-direction: column; justify-content: center; width: 33.3%; border-right: 1px solid #efefef;box-sizing: border-box;}
+#aboutSummary{position: relative; width: 100%; height: 95vh;}
+#aboutSummary .about_summary_wrap{position: relative; width: 90%; height: 100%; max-height: 900px; margin: 10px auto; display: flex; justify-content: space-between; border-radius: 10rem; background-position: center; background-size: cover;background-image: url('/img/csr_overview.jpg');}
+#aboutSummary .about_summary_wrap a{display: flex; flex-direction: column; justify-content: center; width: 33.3%; border-right: 1px solid #efefef;box-sizing: border-box; overflow: hidden;}
+#aboutSummary .empty_box{height: 98.5vh; width: 33.33%; -webkit-backdrop-filter: blur(0px); backdrop-filter: blur(0px); position: absolute; transition-duration: 0.5s;}
+#aboutSummary .empty_box.box1{border-top-left-radius: 10rem; border-bottom-left-radius: 10rem;}
+#aboutSummary .empty_box.box3{border-top-right-radius: 10rem; border-bottom-right-radius: 10rem; }
 #aboutSummary .about_summary_wrap a:first-child{border-top-left-radius: 10rem; border-bottom-left-radius: 10rem; background-image: url('/img/overview2_1.jpg'); background-position: center; background-size: cover;}
 #aboutSummary .about_summary_wrap a:nth-child(2){background-image: url("/img/overview2_2.jpg"); background-position: center; background-size: cover;}
 #aboutSummary .about_summary_wrap a:last-child{border: none; border-top-right-radius: 10rem; border-bottom-right-radius: 10rem; background-image: url('/img/overview2_3.jpg'); background-position: center; background-size: cover;}
-#aboutSummary .about_summary_wrap a:hover{transition-duration: 0.5s; background-image: none;}
+#aboutSummary .about_summary_wrap a:hover .empty_box{-webkit-backdrop-filter: blur(5px); backdrop-filter: blur(5px);}
 #aboutSummary .about_summary_wrap a>div{display: flex; flex-direction: column; text-align: center;}
 #aboutSummary .about_summary_wrap a>div img:first-child{height: 150px; width: 150px; margin: 0 auto; border-radius: 50%;}
-#aboutSummary .about_summary_wrap a>div img{height: 50px; width: 150px; margin: 0 auto;}
-#aboutSummary .about_summary_wrap a>div div{margin: 50px auto;}
+#aboutSummary .about_summary_wrap a>div img{height: 50px; width: 150px; margin: 0 auto; z-index: 1;}
+#aboutSummary .about_summary_wrap a>div div{margin: 50px auto; z-index: 1;}
 
 /* BRAND */
 /* brandBanner */
 #brandBanner{position: relative; width: 100%; overflow: hidden;}
 #brandBanner ul{position: relative; height: 300vh; display: flex; flex-direction: column; }
 #brandBanner ul li{position:relative; height: 100vh; display: flex; justify-content: center; flex-direction: column;}
-#brandBanner ul li .brand_banner{height: 100%; background-image: url('/img/csr_overview.jpg'); background-size: cover; background-position: center;}
-#brandBanner ul li .brand_banner img{width: 174px; position: absolute; top: 50%; left: calc(50% - 87px);}
-#brandBanner ul li .brand_banner:hover{width: 60%; margin: 11% auto; height: 60%; border-radius: 25rem; transition-duration: 0.5s;}
+#brandBanner ul li .brand_banner{height: 100%; width: 100%; margin: 0 auto; background-image: url('/img/csr_overview.jpg'); background-size: cover; background-position: center; transition-duration: 1.5s;}
+#brandBanner ul li .brand_banner img{width: 174px; position: absolute; top: 47%; left: calc(50% - 87px); opacity: 0; transition-duration: 1s;}
 #brandBanner ul li p{width: 50%; margin: 0 auto; text-align: center; font-size: 3em; font-weight: 500;}
-#brandBanner ul li span{font-size: 1.5em;}
+#brandBanner ul li span{font-size: 1.5em; transition-duration: 0.5s;}
 /* brand */
 #brand{position: relative; width: 100%;}
-#brand h2{font-size: 2em; text-align: center;}
+#brand h2{font-size: 2em; text-align: center; margin-top: 40px;}
 #brand div ul{display: flex; justify-content: space-between;}
 #brand div:nth-child(2) ul{width: 300px; margin: 0 auto;}
 #brand div:nth-child(2) ul li{width: 30%; height: 30px; margin: 20px auto;}
 #brand div:nth-child(2) ul li a{width: 100%; text-align: center; border: 1px solid #212121; border-radius: 25px; box-sizing: border-box; line-height: 30px;}
 #brand div:nth-child(2) ul li a:hover{color: #efefef; background-color: #212121; transition-duration: 0.5s;}
-#brand div:last-child ul{width: 70%; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; margin-top: 20px;}
-#brand div:last-child ul li{width: 32%; margin-bottom: 1.3%;}
+#brand div:last-child ul{width: 70%; margin: 0 auto; display: flex; justify-content: start; flex-wrap: wrap; margin-top: 20px;}
+#brand div:last-child ul li{width: 32%; margin-bottom: 1.3%; margin-left: 1%; opacity: 0; transition-duration: 0.5s;}
 #brand div:last-child ul li div{width: 100%; overflow: hidden; border-radius: 25px;}
 #brand div:last-child ul li div img{width: 100%;}
 #brand div:last-child ul li div a img{position: relative; width: 70%; padding: 40% 40px; margin-top: -100%;}
@@ -75,18 +89,28 @@
 /* INVESTORS */
 /* investors */
 #investors{position: relative;}
-#investors .investors_bg{position: relative; width: 100%; height: calc(100vh + 80px); background-image: url('/img/investors_overview.jpg'); background-size: cover; background-position: right; background-repeat: no-repeat; align-items: stretch; background-attachment: fixed;}
-#investors .investors_bg h2{width: 100%; height: 100%; text-align: center; display: flex; flex-direction: column; justify-content: center; color: #ededed; text-shadow: 1px 1px 1px #212121; font-size: 4em;}
-/* investors_item */
-#investors_item{position: relative; width: 85%; margin: 0 auto; margin-top: -80px; padding: 30px 0; background-image: url('/img/stock_information.png'); background-position: right; background-size:contain; background-repeat: no-repeat; background-color: #ededed; }
-#investors_item .investors_info{position: relative; width: 92%; margin: 0 auto; display: flex; flex-direction: column;display: flex; flex-direction: column; flex-wrap: wrap;}
-#investors_item .investors_info h4{font-size: 1.6em; line-height: 40px;}
-#investors_item .investors_info>div{width: 92%; display: flex; justify-content: space-between; height: 50%; line-height: 100%; text-align:justify; margin: 30px 0;}
-#investors_item .investors_info>div>p{ font-size: 1.6em; line-height: 20px;}
-#investors_item .investors_info>div>p:nth-child(2){font-size: 4em;}
-#investors_item .investors_info>div>div{display: flex; justify-content: space-evenly; flex-direction: column;}
-#investors_item .investors_info>div>div>div{display: flex; margin: 10px 0;}
-#investors_item .investors_info>div>div>div img{width: 20px; height: 20px;}
+#investors .investors_bg{position: relative; width: 100%; height: calc(100vh + 80px); background-image: url('/img/investors_overview.jpg'); background-size: cover; background-position: right top; background-repeat: no-repeat; align-items: stretch; background-attachment: fixed;}
+#investors .investors_bg h2{position: relative; width: 100%; height: 100%; text-align: center; display: flex; flex-direction: column; justify-content: center; font-size: 4em; color:#212121;}
+/* 그라데이션 채워지는 텍스트 */
+#investors .investors_bg h2::before{ content: attr(data-text); position: absolute; left:0; top:calc(50% - 48px); width:100%; height:100%; background: linear-gradient(to right, #ededed 50%, #212121 50%); background-size:200% 100%; background-position:right; -webkit-background-clip:text; color:transparent; animation:textFill 3s forwards;}
+#investors .investors_bg h2.active{
+  animation:textFill 3s forwards;
+}
+@keyframes textFill{
+  to{
+    background-position:left;
+  }
+}
+/* investorsItem */
+#investorsItem{position: relative; width: 85%; margin: 0 auto; margin-top: -80px; padding: 30px 0; background-image: url('/img/stock_information.png'); background-position: right top; background-size:contain; background-repeat: no-repeat; background-color: #ededed; }
+#investorsItem .investors_info{position: relative; width: 92%; margin: 0 auto; display: flex; flex-direction: column;display: flex; flex-direction: column; flex-wrap: wrap;}
+#investorsItem .investors_info h4{font-size: 1.6em; line-height: 40px;}
+#investorsItem .investors_info>div{width: 92%; display: flex; justify-content: space-between; height: 50%; line-height: 100%; text-align:justify; margin: 30px 0;}
+#investorsItem .investors_info>div>p{ font-size: 1.6em; line-height: 20px;}
+#investorsItem .investors_info>div>p:nth-child(2){font-size: 4em;}
+#investorsItem .investors_info>div>div{display: flex; justify-content: space-evenly; flex-direction: column;}
+#investorsItem .investors_info>div>div>div{display: flex; margin: 10px 0;}
+#investorsItem .investors_info>div>div>div img{width: 20px; height: 20px;}
 /* presentation */
 #presentation{position: relative; width: 85%; margin: 40px auto; border: 1px solid #dedede; box-sizing: border-box; display: flex; justify-content: space-between;}
 #presentation .presentation_ext{position: relative; margin: 30px 4%; display: flex; flex-direction: column; justify-content: space-between;}
@@ -113,23 +137,22 @@
 #highlight .highlight_content>div div h5 span{font-size: 0.8em; font-weight: 400;}
 #highlight .highlight_content>div div p{font-size: 1.1em; font-weight: 500;}
 #highlight .highlight_content>div div p span{font-size: 3.2em; font-weight: 400;}
-/* investors_list */
-#investors_list{position: relative; width: 85%; margin: 0 auto;}
-#investors_list h4{font-size: 1.4em; margin: 0 10%; margin-top: 40px;}
-
-#investors_list>div{margin: 40px 0; display: flex; justify-content: space-between;}
-#investors_list>div>.schedule{border: 1px solid #dedede; box-sizing: border-box; width: 32%;}
-/* #investors_list>div>div{width: 48.7%;} */
-#investors_list>div>.info_list{display: flex; justify-content: space-between; width: 65%; flex-wrap: wrap;}
-#investors_list>div>.info_list>div{border: 1px solid #dedede; box-sizing: border-box; width: 48%;}
-#investors_list>div>.info_list>.info_3{margin-top: 4%;}
-#investors_list ul{font-size: 1.3em; margin: 20px 10%;}
-#investors_list ul li{margin-bottom: 15px;}
-#investors_list ul li h5{font-weight: 400;}
-#investors_list ul li p{font-size: 0.8em; font-weight: 100;}
-#investors_list ul li a{display: flex; line-height: 20px;}
-#investors_list ul li a img{width: 20px; height: 20px;}
-#investors_list .schedule ul li{margin-bottom: 40px; margin-left: 40px;}
+/* investorsList */
+#investorsList{position: relative; width: 85%; margin: 0 auto;}
+#investorsList h4{font-size: 1.4em; margin: 0 10%; margin-top: 40px;}
+#investorsList>div{margin: 40px 0; display: flex; justify-content: space-between;}
+#investorsList>div>.schedule{border: 1px solid #dedede; box-sizing: border-box; width: 32%;}
+/* #investorsList>div>div{width: 48.7%;} */
+#investorsList>div>.info_list{display: flex; justify-content: space-between; width: 65%; flex-wrap: wrap;}
+#investorsList>div>.info_list>div{border: 1px solid #dedede; box-sizing: border-box; width: 48%;}
+#investorsList>div>.info_list>.info_3{margin-top: 4%;}
+#investorsList ul{font-size: 1.3em; margin: 20px 10%;}
+#investorsList ul li{margin-bottom: 15px;}
+#investorsList ul li h5{font-weight: 400;}
+#investorsList ul li p{font-size: 0.8em; font-weight: 100;}
+#investorsList ul li a{display: flex; line-height: 20px;}
+#investorsList ul li a img{width: 20px; height: 20px;}
+#investorsList .schedule ul li{margin-bottom: 40px; margin-left: 40px;}
 .line::after{content: ""; position: absolute; height: 74%; width: 1px; background-color: #dedede; left: 40px;}
 .line_o::after{content: ""; position: absolute; height: 21%; width: 1px; background-color: #EF151E; left: 40px;}
 .circle::after{content: ""; position: absolute; height: 16px; width: 16px; background-color: #dedede; left: 32px; border-radius: 25px;}
@@ -140,72 +163,351 @@
 
 /* SUSTAINABILITY */
 /* sustainabilityBanner */
-#sustainabilityBanner{position: relative; height: 100vh; background-image: url('/img/csr_overview.jpg'); background-position: center; background-repeat: no-repeat; background-size: cover;}
+#sustainabilityBanner{position: relative; height: 100vh; background-position: center; background-repeat: no-repeat; background-size: cover; overflow: hidden; z-index: 1;}
+.white_reveal{position: absolute; top:0; left:0; width:100%; height:100%; background-image: url('/img/csr_overview.jpg'); background-position: center; background-repeat: no-repeat; background-size: cover; clip-path: circle(0% at 50% 50%);/* clip-path는 요소의 보이는 영역을 자르는 속성
+    circle(크기 at x y)
+    0% = 원 크기가 0 (아무것도 안보임)
+    50% 50% = 화면 정가운데
+    즉, 처음에는 가운데 점만 존재 → 배경이 안보임
+    */
+    transition: clip-path 1.6s ease;/* clip-path 값이 바뀌면 1.6초 동안 부드럽게 애니메이션 실행*/}
+.white_reveal.active{clip-path: circle(150% at 50% 50%);/* 원 크기를 150%로 확대=>화면보다 큰 원이 되면서 배경이미지가 전체 화면을 덮게 됨 */}
 #sustainabilityBanner .sustainability_banner{position: relative; display: flex; flex-direction: column; justify-content: center; height: 100%; text-align: center; color: #ededed;}
 #sustainabilityBanner .sustainability_banner h2{font-size: 4em; font-weight: 500; text-shadow: 1px 1px 1px #212121; margin-bottom: 30px;}
 #sustainabilityBanner .sustainability_banner p{font-size: 1.2em; font-weight: 100; text-shadow: 1px 1px 1px #212121;}
-.h_line::after{content: ""; position: absolute; width: 2px; height: 100px; background-color: #EF151E; left: 50%; top: 95vh; z-index: 1;}
-/* .h_line:hover::after{height: 10px; transition-duration: 0.5s; animation-direction: reverse;} */
 /* sustainability_logo */
-#sustainabilityLogo{position: relative; height: 100vh;}
+#sustainabilityLogo{position: relative; height: 100vh; z-index: 1; background-color: #ffffff;}
 #sustainabilityLogo div{position: relative; height: 100%; display: flex; justify-content: center; flex-direction: column;}
-#sustainabilityLogo div img{width: 400px; margin: 0 auto;}
-#sustainabilityLogo div p{text-align: center; font-size: 1.8em; font-weight: 400; line-height: 50px; margin-top: 40px;}
+#sustainabilityLogo div img{width: 400px; margin: 0 auto; margin-top: 500px; opacity: 0; transition-duration: 1s;}
+#sustainabilityLogo div p{text-align: center; font-size: 1.8em; font-weight: 400; line-height: 50px; margin-top: 40px; opacity: 0;}
 /* sustainability_text */
-#sustainabilityText{position: relative; height: 100vh; display: flex; flex-direction: column; justify-content: center;}
-#sustainabilityText div{position: relative; height: 30%; width: 100%; background-color: #ededed; font-size: 1.8em; display: flex; flex-direction: column; justify-content: center; text-align: center;}
-/* sustainability_list */
-#sustainabilityList{position: relative; height: 100vh; background-color: #ededed; overflow: hidden;}
-#sustainabilityList div{position: relative; height: 100%; text-align: center; display: flex; flex-direction: column; justify-content: center; font-size: 4em;}
-#sustainabilityList .sustainability_list{position: absolute; top: 25%; display: flex; justify-content: space-between; width: 1410px; margin-left: 10%;}
-#sustainabilityList .sustainability_list>li{width: 450px; height: 480px; display: flex; flex-direction: column; border-radius: 5rem; overflow: hidden;}
-#sustainabilityList .sustainability_list>li:hover>p{margin-top: 20px; transition-duration: 0s;}
-#sustainabilityList .sustainability_list>li:first-child:hover{transition-duration: 0.5s; background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url("../img/overview2_1.jpg");}
-#sustainabilityList .sustainability_list>li:nth-child(2):hover{transition-duration: 0.5s; background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url("../img/overview2_2.jpg");}
-#sustainabilityList .sustainability_list>li:last-child:hover{transition-duration: 0.5s; background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url("../img/overview2_3.jpg");}
-#sustainabilityList .sustainability_list>li:first-child{background-image: url('/img/overview2_1.jpg'); background-position: center; background-size: cover; background-repeat: no-repeat; margin-top: 50px;}
-#sustainabilityList .sustainability_list>li:nth-child(2){background-image: url('/img/overview2_2.jpg'); background-position: center; background-size: cover; background-repeat: no-repeat; margin-top: -50px;}
-#sustainabilityList .sustainability_list>li:last-child{background-image: url('/img/overview2_3.jpg'); background-position: center; background-size: cover; background-repeat: no-repeat; margin-top: 50px;}
-#sustainabilityList .sustainability_list>li>p{margin: 20px; text-align: center; height: 250px; color: #ededed; margin-top: 420px;}
-#sustainabilityList .sustainability_list>li>ul{margin: 40px; width: 100%; height: 240px; display: flex; flex-direction: column; justify-content: end; flex-wrap: wrap; z-index: 1;}
-#sustainabilityList .sustainability_list>li>ul>li{width: 50%;}
-#sustainabilityList .sustainability_list>li>ul>li>a{display: flex; width: 100%;}
-#sustainabilityList .sustainability_list>li>ul>li>a>p{line-height: 40px; font-size: 1.1em; color: #ededed; margin-top: 15px;}
-#sustainabilityList .sustainability_list>li>ul>li>a>img{width: 40px; height: 40px;}
+#sustainabilityText{position: relative; height: 100vh; display: flex; flex-direction: column; justify-content: center; z-index: 1; background-color: #ffffff;}
+#sustainabilityText .color_line{position: absolute; top: 33.33%; left: 0;  height: 30%; width: 0%; background-color: #ededed; transition-duration: 1.5s;}
+#sustainabilityText div{position: relative; font-size: 1.8em; display: flex; flex-direction: column; justify-content: center; text-align: center;}
+/* sustainabilityList */
+#sustainabilityList{position: relative; height: 300vh; background-color: #ededed;}
+#sustainabilityList .sustainabilityList_wrap{position: sticky; top: 0; left:0; height: 100vh; display: flex; align-items: center; overflow: hidden;}
+#sustainabilityList .sustainabilityList_wrap div{position: relative; height: 100%; left: 50%; transform: translateX(-50%); text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center; font-size: 4em;}
+#sustainabilityList .sustainabilityList_wrap .card_wrap .sustainability_list{position: absolute; top:20%; left: 50%; display: flex; justify-content: space-between; width: 1410px; gap: 40px; width:max-content; will-change: transform;}
+#sustainabilityList .sustainabilityList_wrap .card_wrap .sustainability_list>li{position: relative; width: 450px; height: 480px; display: flex; flex-direction: column; border-radius: 5rem; overflow: hidden; transform:translateY(80px);}
+/* #sustainabilityList .sustainability_list>li:hover{transform: translateY(-15px);} */
+#sustainabilityList .sustainabilityList_wrap .card_wrap .sustainability_list>li::after{content:""; position:absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.45); opacity:0; transition: opacity 0.4s;}
+#sustainabilityList .sustainabilityList_wrap .card_wrap .sustainability_list>li:hover::after{opacity:1;}
+#sustainabilityList .sustainabilityList_wrap .card_wrap .sustainability_list>li:first-child{background-image: url('/img/overview2_1.jpg'); background-position: center; background-size: cover; background-repeat: no-repeat; margin-top: 50px;}
+#sustainabilityList .sustainabilityList_wrap .card_wrap .sustainability_list>li:nth-child(2){background-image: url('/img/overview2_2.jpg'); background-position: center; background-size: cover; background-repeat: no-repeat; margin-top: -50px;}
+#sustainabilityList .sustainabilityList_wrap .card_wrap .sustainability_list>li:last-child{background-image: url('/img/overview2_3.jpg'); background-position: center; background-size: cover; background-repeat: no-repeat; margin-top: 50px;}
+#sustainabilityList .sustainabilityList_wrap .card_wrap .sustainability_list>li>p{font-size: 0.5em; margin: 20px 0; text-align: center; color: #ededed; position: absolute; bottom: 40px; left: 0; width: 100%; transition: transform 0.5s ease; z-index: 2; text-shadow: 1px 1px 1px #212121;}
+#sustainabilityList .sustainabilityList_wrap .card_wrap .sustainability_list>li:hover>p{transform: translateY(-350px);}
+#sustainabilityList .sustainabilityList_wrap .card_wrap .sustainability_list>li>ul{position: absolute; bottom: 30px; left: 0; margin: 40px 0px; width: 100%; height: 240px; display: flex; flex-direction: column; justify-content: end; flex-wrap: wrap; z-index: 2; opacity:0; transform: translateY(50px); transition: all 0.4s ease;}
+#sustainabilityList .sustainabilityList_wrap .card_wrap .sustainability_list>li>ul:nth-child(2) li{justify-content: start;}
+#sustainabilityList .sustainabilityList_wrap .card_wrap .sustainability_list>li:hover>ul{opacity:1; transform: translateY(0);}
+#sustainabilityList .sustainabilityList_wrap .card_wrap .sustainability_list>li>ul>li{width: 50%;}
+/* #sustainabilityList .sustainabilityList_wrap .card_wrap .sustainability_list>li>ul>li>p{font-size: 20px;} */
+#sustainabilityList .sustainabilityList_wrap .card_wrap .sustainability_list>li>ul>li>a{display: flex; width: 100%;}
+#sustainabilityList .sustainabilityList_wrap .card_wrap .sustainability_list>li>ul>li>a>p{line-height: 30px; font-size: 0.3em; color: #ededed; margin-top: 15px;}
+#sustainabilityList .sustainabilityList_wrap .card_wrap .sustainability_list>li>ul>li>a>img{width: 30px; height: 30px; margin-top: 15px; margin-left: 10px;}
 /* search */
-#search{position: relative; width: 100%;}
+#search{position: relative; width: 100%; z-index: 1; background-color: #ffffff;}
 #search>div{position: relative; width: 100%; margin: 150px 0; background-color: #ededed; padding: 40px 0;}
 #search>div>div{border: 1px solid #212121; box-sizing: border-box; width: 80%; margin: 0 auto; background-color: #ffffff; display: flex; justify-content: space-between; padding: 40px;}
-#search>div>div p{font-size: 1.2em;}
+#search>div>div p{font-size: 1.2em; line-height: 40px;}
 #search>div>div p span{margin-right: 41px;}
-#search>div>div p span::after{content: ""; position: absolute; left: calc(10% + 120px); width: 2px; height: 30px; background-color: #EF151E;}
+#search>div>div p span::after{content: ""; position: absolute; left: calc(10% + 120px); margin-top: 5px; width: 2px; height: 30px; background-color: #EF151E;}
 #search>div>div a{display: flex; border: 1px solid #212121; padding: 5px 10px;}
 #search>div>div a p{font-size: 1em; line-height: 30px; font-weight: 500;}
 #search>div>div a img{width: 30px; height: 30px; margin-left: 20px;}
 /* newsroom */
-#newsroom{position: relative; width: 100%;}
+#newsroom{position: relative; width: 100%; z-index: 1; background-color: #ffffff; margin: 40px 0;}
 #newsroom h2{text-align: center; font-size: 2.5em;}
 #newsroom>ul{width: 40%; margin: 30px auto; display: flex; justify-content: space-evenly; font-size: 1.2em;}
 #newsroom>ul>li>a:hover p{color: #EF151E; transition-duration: 0.5s; font-weight: 500;}
 #newsroom .new_list{position: relative; width: 80%; margin: 0 auto; overflow: hidden; margin-bottom: 60px;}
-#newsroom .new_list ul{width: 200%; display: flex; justify-content: space-evenly;}
+#newsroom .new_list ul{width: 200%; display: flex; justify-content: space-evenly; transition-duration: 0.5s;}
 #newsroom .new_list ul li{width: 9%; background-image: url('/img/img14_aboutus_01.jpg'); background-position: center; background-repeat: no-repeat; background-size: cover;}
-#newsroom .new_list ul li .news_bg{width: 100%; height: 60%;}
+#newsroom .new_list ul li .news_bg{width: 100%; height: 60%; cursor: pointer;}
 #newsroom .new_list ul li:hover .news_bg{height: 100%; background-image: linear-gradient(#ffffff, #FF9700); opacity: 0.5; transition-duration: 0.5s;}
 #newsroom .new_list ul li:hover .news_text{opacity: 1; transition-duration: 0.5s;}
-#newsroom .new_list ul li .news_text{height: 100%; display: flex; flex-direction: column; justify-content: end; opacity: 0;}
-#newsroom .new_list ul li .news_text p:nth-child(2){overflow: hidden;
-  text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;}
-#newsroom .new_list ul li .news_text a{display: flex; justify-content: end;}
-#newsroom .new_list ul li>div:last-child{background-color: #ffffff; padding: 5px;}
+#newsroom .new_list ul li .news_text{height: 100%; display: flex; flex-direction: column; justify-content: start; opacity: 0;}
+#newsroom .new_list ul li .news_text p:nth-child(2){overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;}
+#newsroom .new_list ul li .news_text a{display: flex; justify-content: end; width: 40%; margin-left: 60%;}
+#newsroom .new_list ul li>div:last-child{background-color: #ffffff; padding: 5px; height: 40%;}
 #newsroom .new_list ul li>div p:first-child{font-size: 0.85em; font-weight: 500; margin-bottom: 10px;}
+#newsroom .new_list ul li:last-child>div p:first-child{font-size: 0.85em; font-weight: 500; margin-bottom: 10px;}
 #newsroom .new_list ul li>.news_text p:first-child span{margin-left: 20px;}
-
+#newsroom .sus_ctrl{position: absolute; width: 100%; display: flex; justify-content: space-between; left: 50%; top: 50%; transform: translate(-50%, -50%);}
+#newsroom .sus_ctrl a{width: 40px; height: 40px; background-color: #212121; opacity: 0.5; border-radius: 25em; transition-duration: 0.5s;}
+#newsroom .sus_ctrl .right:hover{opacity: 0.8;}
+#newsroom .sus_ctrl img{width: 100px;}
 /* PC */
 @media screen and (min-width:1201px){}
 
 /* 태블릿 */
-@media screen and (min-width:801px) and (max-width:1200px){}
+@media screen and (min-width:801px) and (max-width:1200px){
+  /* CJABOUTUS */
+  /* CJaboutUsList */
+  #CJaboutUsList>ul>li>div h2{font-size: 2.3em;}
+  #CJaboutUsList>ul>li>div p{font-size: 1.1em;}
+  /* mvc */
+  #mvc>ul>li>div .core_values{width: 90%; min-height: 200px;}
+  #mvc>ul>li>div .core_values>li p{font-size: 1.1em;}
+  #mvc>ul>li>div .principles{margin: 8% 0;}
+  #mvc>ul>li>div .principles>ul{width: 55%;}
+  #mvc>ul>li>div .principles>ul li{width: 100px; height: 100px;}
+  #mvc>ul>li>div .principles>ul li p{font-size: 1.2em; margin-bottom: 10px;}
+
+  /* BRAND */
+  /* brandBanner */
+  #brandBanner ul li p{font-size: 2.4em;}
+  /* brand */
+  #brand div ul{display: flex; justify-content: space-between;}
+  #brand div:nth-child(2) ul{width: 270px; margin: 0 auto;}
+  #brand div:nth-child(2) ul li{height: 25px;}
+  #brand div:nth-child(2) ul li a{line-height: 25px;}
+  #brand div:last-child ul{width: 85%;}
+
+  /* INVESTORS */
+  /* investorsItem */
+  #investorsItem{width: 95%; padding: 20px 0;}
+  #investorsItem .investors_info h4{font-size: 1.3em;}
+  #investorsItem .investors_info>div{width: 100%;}
+  #investorsItem .investors_info>div>p{font-size: 1.3em;}
+  #investorsItem .investors_info>div>p:nth-child(2){font-size: 2.7em;}
+  /* presentation */
+  #presentation{width: 95%;}
+  #presentation .presentation_ext>h5{font-size: 1.2em;}
+  #presentation .presentation_ext div h4{font-size: 1.3em;}
+  #presentation .presentation_ext a p{font-size: 1.1em; line-height: 30px;}
+  #presentation .presentation_ext a img{width: 30px; height: 30px;}
+  #presentation .presentation_ext a h5{font-size: 1.3em; font-weight: 500;}
+  /* highlight */
+  #highlight{width: 95%;}
+  #highlight .highlight_content{margin: 20px auto;}
+  #highlight .highlight_content>div h4{font-size: 1.3em; line-height: 30px;}
+  #highlight .highlight_content>div img{height: 30px; width: 30px;}
+  #highlight .highlight_content>div div h5{font-size: 1.2em;}
+  #highlight .highlight_content>div div p span{font-size: 2.7em;}
+  /* investorsList */
+  #investorsList{width: 95%;}
+  #investorsList h4{font-size: 1.3em; margin: 0 10%; margin-top: 30px;}
+  #investorsList>div{margin: 30px 0;}
+  #investorsList>div>.info_list{display: flex; justify-content: space-between; width: 65%; flex-wrap: wrap;}
+  #investorsList ul{font-size: 1.1em; margin: 20px 7%;}
+  #investorsList ul li{margin-bottom: 15px;}
+  #investorsList ul li h5{font-weight: 400;}
+  #investorsList ul li p{font-size: 0.8em; font-weight: 100;}
+  #investorsList ul li a{display: flex; line-height: 20px;}
+  #investorsList ul li a img{width: 20px; height: 20px;}
+  #investorsList .schedule ul li{margin-bottom: 30px; margin-left: 20px;}
+  .line::after{content: ""; position: absolute; height: 65%; width: 1px; background-color: #dedede; left: 20px;}
+  .line_o::after{left: 20px;}
+  .circle::after{left: 12px;}
+  .circle0::after{top: 20%; background-color: #ffffff; border: 3px solid #EF151E; box-sizing: border-box;}
+  .circle1::after{top: 38%;}
+  .circle2::after{top: 55%;}
+  .circle3::after{top: 73%;}
+
+  /* SUSTAINABILITY */
+  /* sustainabilityList */
+  #sustainabilityList .sustainabilityList_wrap div{font-size: 2.6em;}
+  #sustainabilityList .sustainabilityList_wrap .card_wrap .sustainability_list{gap: 10px;}
+  #sustainabilityList .sustainabilityList_wrap .card_wrap .sustainability_list>li{width: 250px;}
+  #sustainabilityList .sustainabilityList_wrap .card_wrap .sustainability_list>li>p{margin: 10px 0; bottom: 30px;}
+  #sustainabilityList .sustainabilityList_wrap .card_wrap .sustainability_list>li>ul{height: 150px; margin: 30px 0px;}
+  #sustainabilityList .sustainabilityList_wrap .card_wrap .sustainability_list>li>ul>li>a>p{line-height: 20px;}
+  #sustainabilityList .sustainabilityList_wrap .card_wrap .sustainability_list>li>ul>li>a>img{width: 20px; height: 20px; margin-top: 15px;}
+  /* search */
+  #search>div{padding: 30px 0;}
+  #search>div>div{width: 90%; padding: 25px;}
+  #search>div>div p span::after{left: calc(10% + 65px);}
+  /* newsroom */
+  #newsroom h2{font-size: 2em;}
+  #newsroom>ul{margin: 30px auto; font-size: 1.1em;}
+  #newsroom .new_list{width: 90%;}
+  #newsroom .new_list ul li .news_text a{width: 60%; margin-left: 40%; font-size: 0.8em;}
+  #newsroom .new_list ul li>div:last-child>p:last-child{overflow: hidden;
+    text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;}
+  #newsroom .new_list ul li>div p{font-size: 0.8em;}
+}
 
 /* 스마트폰 */
-@media screen and (max-width:800px){}
+@media screen and (max-width:800px){
+  /* CJABOUTUS */
+  /* CJaboutUsList */
+  #CJaboutUsList>ul>li>div h2{font-size: 1.8em;}
+  #CJaboutUsList>ul>li>div p{font-size: 1em;}
+  .mobile{display: block;}
+  /* CJaboutUsList2 */
+  #CJaboutUsList2{position: relative; width: 100%; height: 300vh; display: flex;}
+  #CJaboutUsList2 .sticky_wrap{position: sticky; top: 0; width: 100%; height: 100vh; display: flex; overflow: hidden; display: none;}
+  #CJaboutUsList2 .sticky_wrap_mobile{display: block;}
+  #CJaboutUsList2 .inner_list{width: 100%; position: absolute;}
+  #CJaboutUsList2 .inner_list.list_up{z-index: 1;}
+  #CJaboutUsList2 .inner_list.list_down{z-index: 2;}
+  #CJaboutUsList2 .list_down>li>div{width: 95%; font-size: 0.9em; color: #ededed; text-shadow: 1px 1px 1px #212121;}
+  .mobile_none{display: none;}
+  /* mvc */
+  #mvc>ul>li>div h2{margin-top: 3%; font-size: 1em;}
+  #mvc>ul>li>div p{margin-top: 3%; font-size: 1.1em;}
+  #mvc>ul>li:nth-child(3)>div img{width: 60px; height: 60px; margin: 0 auto; margin-top: 10%; margin-bottom: -5%;}
+  #mvc>ul>li:nth-child(3)>div h2{margin-bottom: 20px; font-size: 1em;}
+  #mvc>ul>li:nth-child(3)>div p{font-size: 0.9em;}
+  #mvc>ul>li>div .core_values{width: 80%; flex-direction: column;}
+  #mvc>ul>li>div .core_values>li{width: 100%; height: 40vh; min-height: 100px;}
+  #mvc>ul>li>div .core_values>li p{margin-bottom: 20px; margin-left: 20px; margin-right: 20px;}
+  #mvc>ul>li>div .core_values>li:first-child p{text-align: center;}
+  #mvc>ul>li>div .core_values>li:nth-child(2) p{text-align: center;}
+  #mvc>ul>li>div .core_values>li:last-child p{text-align: center;}
+  #mvc>ul>li>div .core_values>li p{font-size: 1em;}
+  #mvc>ul>li>div .principles{position: relative; margin: 5% 0;}
+  #mvc>ul>li>div .principles>ul{width: 90%; margin-top: 20px; justify-content: center;}
+  #mvc>ul>li>div .principles>ul li{width: 80px; height: 80px; margin: 0 5px;}
+  #mvc>ul>li>div .principles>ul li p{font-size: 1em;}
+  /* about_summary */
+  #aboutSummary{position: relative; width: 100%; height: 95vh; min-height: 900px;}
+  #aboutSummary .about_summary_wrap{flex-direction: column;}
+  #aboutSummary .about_summary_wrap a{width: 100%; height: 33.33%;}
+  #aboutSummary .empty_box{height: 33.33%; width: 100%; -webkit-backdrop-filter: blur(0px); backdrop-filter: blur(0px); position: absolute; transition-duration: 0.5s;}
+  #aboutSummary .empty_box.box1{border-top-left-radius: 5rem; border-bottom-left-radius: 0rem; border-top-right-radius: 5rem;}
+  #aboutSummary .empty_box.box3{border-top-right-radius: 0rem; border-bottom-right-radius: 5rem; border-bottom-left-radius: 5rem;}
+  #aboutSummary .about_summary_wrap a:first-child{border-top-left-radius: 5rem; border-bottom-left-radius: 0rem; border-top-right-radius: 5rem; background-image: url('/img/overview2_1.jpg'); background-position: center; background-size: cover;}
+  #aboutSummary .about_summary_wrap a:nth-child(2){background-image: url("/img/overview2_2.jpg"); background-position: center; background-size: cover;}
+  #aboutSummary .about_summary_wrap a:last-child{border: none; border-top-right-radius: 0rem; border-bottom-right-radius: 5rem; border-bottom-left-radius: 5rem; background-image: url('/img/overview2_3.jpg'); background-position: center; background-size: cover;}
+
+  #aboutSummary .about_summary_wrap a>div{display: flex; flex-direction: column; justify-content: center; text-align: center;}
+  #aboutSummary .about_summary_wrap a>div img:first-child{height: 90px; width: 90px; margin: 0 auto; border-radius: 50%;}
+  #aboutSummary .about_summary_wrap a>div img{height: 40px; width: 100px; margin: 0 auto; z-index: 1;}
+  #aboutSummary .about_summary_wrap a>div div{margin: 20px auto; z-index: 1;}
+  #aboutSummary .about_summary_wrap a>div div{color: #ededed;}
+  #aboutSummary .about_summary_wrap a>div div h2{color: #ededed;}
+
+  /* BRAND */
+  /* brandBanner */
+  #brandBanner ul li .brand_banner img{top: 47%;}
+  #brandBanner ul li p{width: 90%; margin: 0 auto; text-align: center; font-size: 1.8em; font-weight: 500;}
+  /* brand */
+  #brand{position: relative; width: 100%;}
+  #brand h2{font-size: 1.8em; text-align: center;}
+  #brand div ul{display: flex; justify-content: space-between;}
+  #brand div:nth-child(2) ul{width: 70%;}
+  #brand div:nth-child(2) ul li{height: 25px;}
+  #brand div:nth-child(2) ul li a{line-height: 25px;}
+  #brand div:last-child ul{width: 98%; margin-top: 10px;}
+  #brand div:last-child ul li{width: 48%; margin-bottom: 1%; margin-left: 1%;}
+  #brand div:last-child ul li div{width: 100%; overflow: hidden; border-radius: 25px;}
+  #brand div:last-child ul li div img{width: 100%;}
+  #brand div:last-child ul li div a img{position: relative; width: 70%; padding: 40% 40px; margin-top: -100%;}
+  #brand div:last-child ul li div:hover>img{transform: scale(1.1); transition-duration: 0.5s;}
+
+  /* INVESTORS */
+  /* investors */
+  #investors .investors_bg h2{position: relative; width: 100%; height: 100%; text-align: center; display: flex; flex-direction: column; justify-content: center; font-size: 3em; color:#212121;}
+  /* 그라데이션 채워지는 텍스트 */
+  #investors .investors_bg h2::before{top:calc(50% - 40px);}
+  /* investorsItem */
+  #investorsItem{width: 95%;}
+  #investorsItem .investors_info{flex-direction: column;}
+  #investorsItem .investors_info h4{font-size: 1.2em; text-align: center; line-height: 30px;}
+  #investorsItem .investors_info>div{line-height: 20px; text-align:justify; margin: 15px 0; flex-direction: column;}
+  #investorsItem .investors_info>div>p{ font-size: 1.2em; text-align: center; line-height: 20px;}
+  #investorsItem .investors_info>div>p:nth-child(2){font-size: 2.5em; margin: 15px 0;}
+  #investorsItem .investors_info>div>div{flex-direction: row;}
+  #investorsItem .investors_info>div>div{margin-top: 30px;}
+  #investorsItem .investors_info>div>div:last-child{margin-top: 0px;}
+  #investorsItem .investors_info>div>div>p{text-align: center; margin-top: 15px; height: 20px; line-height: 20px;}
+  #investorsItem .investors_info>div>div>div{display: flex; margin: 10px 0; justify-content: center; height: 20px; line-height: 30px;}
+  #investorsItem .investors_info>div>div>div img{width: 15px; height: 15px; margin-top: 7px;}
+  /* presentation */
+  #presentation{width: 95%;}
+  #presentation .presentation_ext{position: relative; margin: 15px 4%;}
+  #presentation .presentation_ext>h5{font-size: 1.1em; font-weight: 500; margin-top: 10px;}
+  #presentation .presentation_ext div{display: flex; margin: 20px 0;}
+  #presentation .presentation_ext div:first-child img{width: 30px; height: 30px; margin-left: 5px; margin-top: 5px;}
+  #presentation .presentation_ext div h4{font-size: 1.3em;}
+  #presentation .presentation_ext div:last-child{margin-top: 30px;}
+  #presentation .presentation_ext a p{font-size: 1.1em; line-height: 20px; margin-right: 5px;}
+  #presentation .presentation_ext a{display: flex; margin-top: 15px;}
+  #presentation .presentation_ext a:last-child{margin-top: 30px;}
+  #presentation .presentation_ext a img{width: 25px; height: 25px; margin-top: 5px;}
+  #presentation .presentation_ext a:last-child img{width: 20px; height: 20px;}
+  #presentation .presentation_ext a h5{font-size: 1.1em; font-weight: 500;}
+  #presentation .presentation_pdf{display: none;}
+  /* highlight */
+  #highlight{width: 95%;}
+  #highlight .highlight_content{display: flex; flex-direction: column; margin: 30px auto; width: 92%;}
+  #highlight .highlight_content>div:first-child{flex-direction: row;}
+  #highlight .highlight_content>div{display: flex; justify-content: center; flex-direction: column; margin: 10px 0;}
+  #highlight .highlight_content>div h4{font-size: 1.3em; line-height: 30px; text-align: center;}
+  #highlight .highlight_content>div img{height: 30px; width: 30px;}
+  #highlight .highlight_content>div>div{display: flex; justify-content: space-between; flex-direction: column;}
+  #highlight .highlight_content>div:last-child{justify-content: space-between;}
+  #highlight .highlight_content>div div h5{font-size: 1.2em; font-weight: 500; text-align: center; margin-top: 10px;}
+  #highlight .highlight_content>div div h5 span{font-size: 0.8em; font-weight: 400; text-align: center;}
+  #highlight .highlight_content>div div p{font-size: 1em; font-weight: 500; text-align: center;}
+  #highlight .highlight_content>div div p span{font-size: 2.5em; font-weight: 400; text-align: center;}
+  /* investorsList */
+  #investorsList{width: 95%;}
+  #investorsList h4{font-size: 1.2em; margin: 0 10%; margin-top: 40px;}
+  #investorsList>div{flex-direction: column;}
+  #investorsList>div>.schedule{width: 100%;}
+  #investorsList>div>.info_list{width: 100%;}
+  #investorsList>div>.info_list h4{margin-top: 20px;}
+  #investorsList>div>.info_list>div{width: 100%; margin-top: 5%;}
+  #investorsList>div>.info_list>.info_3{margin-top: 5%;}
+  #investorsList ul{font-size: 1.2em; margin: 20px 10%;}
+  #investorsList ul li{margin-bottom: 15px;}
+  #investorsList ul li h5{font-weight: 400;}
+  #investorsList ul li p{font-size: 0.8em; font-weight: 100;}
+  #investorsList ul li a{display: flex; line-height: 20px;}
+  #investorsList ul li a img{width: 20px; height: 20px;}
+  #investorsList .schedule ul li{margin-bottom: 40px; margin-left: 40px;}
+  .line::after{content: ""; position: absolute; height: 28%; width: 1px; background-color: #dedede; left: 40px;}
+  .line_o::after{content: ""; position: absolute; height: 8.6%; width: 1px; background-color: #EF151E; left: 40px;}
+  .circle::after{content: ""; position: absolute; height: 16px; width: 16px; background-color: #dedede; left: 32px; border-radius: 25px;}
+  .circle0::after{top: 8.3%; background-color: #ffffff; border: 3px solid #EF151E; box-sizing: border-box;}
+  .circle1::after{top: 16.3%;}
+  .circle2::after{top: 24%;}
+  .circle3::after{top: 31.6%;}
+
+  /* SUSTAINABILITY */
+  /* sustainabilityBanner */
+  #sustainabilityBanner .sustainability_banner h2{font-size: 2em;}
+  #sustainabilityBanner .sustainability_banner p{font-size: 1em; font-weight: 100; text-shadow: 1px 1px 1px #212121;}
+  /* sustainability_logo */
+  #sustainabilityLogo div img{width: 250px;}
+  #sustainabilityLogo div p{font-size: 1em;line-height: 30px;}
+  /* sustainability_text */
+  #sustainabilityText .color_line{transition-duration: 3s;}
+  #sustainabilityText div{font-size: 1em;}
+  /* sustainabilityList */
+  #sustainabilityList .sustainabilityList_wrap div{position: relative; height: 100%; left: 50%; transform: translateX(-50%); text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center; font-size: 2em;}
+  #sustainabilityList .sustainabilityList_wrap .card_wrap .sustainability_list{gap: 10px;}
+  #sustainabilityList .sustainabilityList_wrap .card_wrap .sustainability_list>li{width: 350px; height: 380px;}
+  #sustainabilityList .sustainabilityList_wrap .card_wrap .sustainability_list>li:hover>p{transform: translateY(-260px);}
+  #sustainabilityList .sustainabilityList_wrap .card_wrap .sustainability_list>li>ul{bottom: 0px; margin: 40px 10px;}
+  /* search */
+  #search{position: relative; width: 100%; z-index: 1; background-color: #ffffff;}
+  #search>div{position: relative; width: 100%; margin: 150px 0; background-color: #ededed; padding: 40px 0;}
+  #search>div>div{width: 95%; padding: 30px; display: flex; flex-direction: column;}
+  #search>div>div p{font-size: 1em; line-height: 30px; text-align: center;}
+  #search>div>div p span{margin-right: 0px;}
+  #search>div>div p span::after{display: none;}
+  #search>div>div a{display: flex; border: 1px solid #212121; padding: 5px; justify-content: center; margin-top: 20px;}
+  #search>div>div a p{font-size: 0.9em;}
+  /* newsroom */
+  #newsroom h2{text-align: center; font-size: 2em;}
+  #newsroom>ul{width: 90%; margin: 20px auto; display: flex; justify-content: space-evenly; font-size: 1em;}
+  #newsroom .new_list{width: 90%;}
+  #newsroom .new_list ul{flex-direction: column; overflow: hidden;}
+  #newsroom .new_list ul li{width: 100%; height: 250px; margin-bottom: 20px; overflow: hidden; box-shadow: 0px 3px 3px rgba(0,0,0,0.12), 0px 3px 3px rgba(0,0,0,0.24); transition: all 0.3s cubic-bezier(.25,.8,.25,1); box-sizing: border-box;}
+  #newsroom .new_list ul li .news_bg{width: 100%; height: 60%; cursor: pointer;}
+  #newsroom .new_list ul li:hover .news_bg{height: 100%; background-image: linear-gradient(#ffffff, #FF9700); opacity: 0.5; transition-duration: 0.5s;}
+  #newsroom .new_list ul li:hover .news_text{opacity: 1; transition-duration: 0.5s;}
+  #newsroom .new_list ul li .news_text{height: 100%; display: flex; flex-direction: column; justify-content: space-between; opacity: 0;}
+  #newsroom .new_list ul li .news_text>div{margin: 30px;}
+  #newsroom .new_list ul li .news_text a{display: flex; justify-content: end; width: 40%; margin: 20px; margin-left: calc(60% - 40px);}
+  #newsroom .new_list ul li>div:last-child{background-color: #ffffff; padding: 5px; height: 40%;}
+  #newsroom .new_list ul li>div p:first-child{font-size: 0.85em; font-weight: 500; margin-bottom: 10px;}
+  #newsroom .new_list ul li:last-child>div p:first-child{font-size: 0.85em; font-weight: 500; margin-bottom: 10px;}
+  #newsroom .new_list ul li>.news_text p:first-child span{margin-left: 20px;}
+
+}

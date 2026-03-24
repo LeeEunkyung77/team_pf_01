@@ -12,80 +12,181 @@
     <script src="script/sub.js"></script>
     <title>ABOUT US | CJ제일제당</title>
 </head>
+
 <body>
-    <section id="CJaboutUsList">
+    <section id="CJaboutUsList" class="about_index">
         <ul>
-            <li style="background-color: antiquewhite;">
+            <li class="out_list1">
                 <div>
-                    <h2>CJ제일제당소개</h2>
+                    <h2>
+                        <script>
+                            var message="CJ제일제당소개"
+                            var neonbasecolor="#212121";
+                            var neontextcolor="#FF9700";
+                            var flashspeed=70;
+
+                            var n=0;
+                            if (document.all||document.getElementById){
+                                document.write('<font color="'+neonbasecolor+'">');
+                                for (m=0;m<message.length;m++){
+                                    document.write('<span id="neonlight'+m+'">'+message.charAt(m)+'</span>');
+                                    document.write('</font>');
+                                }
+                            }
+                            else{
+                                document.write(message)
+                            }
+                            function crossref(number){
+                            var crossobj=document.all? eval("document.all.neonlight"+number) : document.getElementById("neonlight"+number);
+                            return crossobj;
+                            }
+
+                            function neon(){
+                                if (n==0){
+                                    for (m=0;m<message.length;m++){
+                                        crossref(m).style.color=neonbasecolor;
+                                    }
+                                }
+
+                                crossref(n).style.color=neontextcolor;
+
+                                if (n<message.length-1){
+                                    n++;
+                                }
+                                // 반복하기 위한 else
+                                // else{
+                                //     n=0;
+                                //     clearInterval(flashing);
+                                //     setTimeout("beginneon()",1500);
+                                //     return;
+                                // }
+                            }
+
+                            function beginneon(){
+                                if (document.all||document.getElementById){
+                                    flashing=setInterval("neon()",flashspeed);
+                                }
+                            }
+                            beginneon();
+                        </script>
+                    </h2>
                     <p>건강, 즐거움, 편리를 창조하는<br>
                         글로벌 생활문화기업 CJ제일제당을 소개합니다
                     </p>
                 </div>
             </li>
-            <div class="v_line"></div>
-            <li style="background-color:burlywood;">
+            <li class="out_list2">
                 <div>
-                    <h2>CJ제일제당은 끊임없는 도전과 혁신을 통해<br>
-                        글로벌식품·BIO 기업으로 도약하고 있습니다
+                    <h2>CJ제일제당은 끊임없는<br class="mobile"> 도전과 혁신을 통해<br>
+                        글로벌식품·BIO 기업으로<br class="mobile"> 도약하고 있습니다
                     </h2>
                     <p>70년 이상 쌓아온 변화의 성장의 DNA를 바탕으로<br>
-                        건강, 즐거움, 편리를 창조하는 글로벌 생활문화기업으로 나아갑니다.
+                        건강, 즐거움, 편리를 창조하는<br class="mobile"> 글로벌 생활문화기업으로 나아갑니다.
                     </p>
                 </div>
             </li>
-            <li>
-                <ul class="inner_list">
-                    <li>
-                        <div>
-                            <h2>세계인의 식탁에<br>
-                                맛있는 즐거움을 전합니다
-                            </h2>
-                            <p>현지음식과 한식을 결합한 K-Food로 한국의 맛을<br>
-                                세계화하고, 건강하고 편리한 라이프스타일을 나누고자 합니다
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="img/ex.jpg" alt="">
-                    </li>
-                    <li>
-                        <div>
-                            <h2>Green BIO 기술 혁신으로<br>
-                                글로벌 친환경 시대를 열어갑니다
-                            </h2>
-                            <p>자연에서 얻고 자연으로 돌려주는 기술, 지속 가능한 삶과 건강한 지구<br>
-                                이것이 CJ제일제당이 생각하는 BIO사업의 철학입니다
-                            </p>
-                        </div>
-                    </li>
-                </ul>
-                <ul class="inner_list">
-                    <li>
-                        <img src="img/ex.jpg" alt="">
-                    </li>
-                    <li>
-                        <div>
-                            <h2>글로벌 지역사회와 함께<br>
-                                성장하는 세상을 만듭니다
-                            </h2>
-                            <p>CJ제일제당이 가장 잘 할 수 있고 사회적 관심이 필요한 영역에서<br>
-                                더불어 사는 사회를 구현하고자 '국민 건강식생활 증진'<br>
-                                '지역사회의 환경 생태계 보존'<br>
-                                그리고 '청소년 꿈 실현'을 목표로 사회공헌 활동을 실천하고 있습니다
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="img/ex.jpg" alt="">
-                    </li>
-                </ul>
-            </li>
         </ul>
+        <div class="v_line"></div>
     </section>
-    <section id="mvc">
+    <section id="CJaboutUsList2" class="about_index">
+        <div class="sticky_wrap">
+            <ul class="inner_list list_down">
+                <li class="in_list1">
+                    <div>
+                        <h2>Green BIO 기술 혁신으로<br>
+                            글로벌 친환경 시대를 열어갑니다
+                        </h2>
+                        <p>자연에서 얻고 자연으로 돌려주는 기술, 지속 가능한 삶과 건강한 지구<br>
+                            이것이 CJ제일제당이 생각하는 BIO사업의 철학입니다
+                        </p>
+                    </div>
+                </li>
+                <li class="in_list2">
+                    <img src="img/ex.jpg" alt="">
+                </li>
+                <li class="in_list3">
+                    <div>
+                        <h2>세계인의 식탁에<br>
+                            맛있는 즐거움을 전합니다
+                        </h2>
+                        <p>현지음식과 한식을 결합한 K-Food로 한국의 맛을<br>
+                            세계화하고, 건강하고 편리한 라이프스타일을 나누고자 합니다
+                        </p>
+                    </div>
+                </li>
+            </ul>
+            <ul class="inner_list list_up">
+                <li class="in_list3">
+                    <img src="img/bibigo_mandoo.png" alt="">
+                </li>
+                <li class="in_list2">
+                    <div>
+                        <h2>글로벌 지역사회와 함께<br>
+                            성장하는 세상을 만듭니다
+                        </h2>
+                        <p>CJ제일제당이 가장 잘 할 수 있고 사회적 관심이 필요한 영역에서<br>
+                            더불어 사는 사회를 구현하고자 '국민 건강식생활 증진'<br>
+                            '지역사회의 환경 생태계 보존'<br>
+                            그리고 '청소년 꿈 실현'을 목표로 사회공헌 활동을 실천하고 있습니다
+                        </p>
+                    </div>
+                </li>
+                <li class="in_list1">
+                    <img src="img/csr_overview.jpg" alt="">
+                </li>
+            </ul>
+        </div>
+        <div class="sticky_wrap_mobile sticky_wrap">
+            <ul class="inner_list list_down">
+                <li class="in_list1">
+                    <div>
+                        <h2>Green BIO 기술 혁신으로<br>
+                            글로벌 친환경 시대를 열어갑니다
+                        </h2>
+                        <p>자연에서 얻고 자연으로 돌려주는<br class="mobile"> 기술, 지속 가능한 삶과 건강한 지구<br>
+                            이것이 CJ제일제당이 생각하는 BIO사업의 철학입니다
+                        </p>
+                    </div>
+                </li>
+                <li class="in_list2">
+                    <div>
+                        <h2>글로벌 지역사회와 함께<br>
+                            성장하는 세상을 만듭니다
+                        </h2>
+                        <p>CJ제일제당이 가장 잘 할 수 있고 사회적 관심이 필요한 영역에서<br class="mobile_none">
+                            더불어 사는 사회를 구현하고자 '국민 건강식생활 증진'<br class="mobile_none">
+                            '지역사회의 환경 생태계 보존'<br class="mobile_none">
+                            그리고 '청소년 꿈 실현'을 목표로 사회공헌 활동을 실천하고 있습니다
+                        </p>
+                    </div>
+                </li>
+                <li class="in_list3">
+                    <div>
+                        <h2>세계인의 식탁에<br>
+                            맛있는 즐거움을 전합니다
+                        </h2>
+                        <p>현지음식과 한식을 결합한 K-Food로 한국의 맛을<br>
+                            세계화하고, 건강하고 편리한 라이프스타일을 나누고자 합니다
+                        </p>
+                    </div>
+                </li>
+            </ul>
+            <ul class="inner_list list_up">
+                <li class="in_list3">
+                    <img src="img/bibigo_mandoo.png" alt="">
+                </li>
+                <li class="in_list2">
+                    <img src="img/ex.jpg" alt="">
+                </li>
+                <li class="in_list1">
+                    <img src="img/csr_overview.jpg" alt="">
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section id="mvc" class="about_index">
         <ul>
-            <li>
+            <li class="mvc_list1">
                 <div>
                     <h2 class="red">MISSION</h2>
                     <p>ONLYONE제품과 서비스로<br>
@@ -93,14 +194,14 @@
                     </p>
                 </div>
             </li>
-            <li>
+            <li class="mvc_list2">
                 <div>
                     <img src="" alt="up">
                     <h2 class="red">VISION</h2>
-                    <p>건강, 즐거움, 편리를 창조하는 글로벌 생활문화기업</p>
+                    <p>건강, 즐거움, 편리를 창조하는<br class="mobile">  글로벌 생활문화기업</p>
                 </div>
             </li>
-            <li style="background-color: antiquewhite;">
+            <li class="mvc_list3">
                 <div>
                     <div>
                         <img src="" alt="up">
@@ -147,9 +248,9 @@
             </li>
         </ul>
     </section>
-    <section id="aboutSummary">
+    <section id="aboutSummary" class="about_index">
         <div class="about_summary_wrap">
-            <a href="">
+            <a href="#" class="bg_img">
                 <div>
                     <img src="img/ex.jpg" alt="icon">
                     <div>
@@ -161,8 +262,9 @@
                     </div>
                     <img src="" alt="arrow">
                 </div>
+                <div class="empty_box box1"></div>
             </a>
-            <a href="">
+            <a href="#" class="bg_img">
                 <div>
                     <img src="img/ex.jpg" alt="icon">
                     <div>
@@ -174,8 +276,9 @@
                     </div>
                     <img src="" alt="arrow">
                 </div>
+                <div class="empty_box box2"></div>
             </a>
-            <a href="">
+            <a href="#" class="bg_img">
                 <div>
                     <img src="img/ex.jpg" alt="icon">
                     <div>
@@ -187,6 +290,7 @@
                     </div>
                     <img src="" alt="arrow">
                 </div>
+                <div class="empty_box box3"></div>
             </a>
         </div>
     </section>

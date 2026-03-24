@@ -6,30 +6,34 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/sub.css">
+    <script src="script/jquery-3.7.0.min.js"></script>
+    <script src="script/jquery.cookie.js"></script>
+    <script src="script/sub.js"></script>
     <title>SUSTAINABILITY | CJ제일제당</title>
 </head>
 <body>
-    <section id="sustainabilityBanner">
+    <section id="sustainabilityBanner" class="about_index">
+        <div class="white_reveal"></div>
         <div class="sustainability_banner">
             <h2>지속가능경영 소개</h2>
             <p>
-                CJ제일제당은 사업의 경제적, 환경적 건정성을 확보하고 사회적 책임을 이행하여<br>
+                CJ제일제당은 사업의 경제적, 환경적 건정성을<br class="mobile"> 확보하고 사회적 책임을 이행하여<br>
                 기업의 지속가능한 성장을 추진하고 있습니다.
             </p>
         </div>
-        <div class="h_line"></div>
     </section>
-    <section id="sustainabilityLogo">
+    <section id="sustainabilityLogo" class="about_index">
         <div>
             <img src="img/overview_1.png" alt="nature to nature cycle, sustainability purpose. 원재료, 생산, 소비, 폐기">
             <p class="red">
                 CJ제일제당은 지속가능한 미래를 위해<br>
-                자연에서 소비자 식탁으로, 그리고 다시 자연으로 되돌리는<br>
+                자연에서 소비자 식탁으로,<br class="mobile"> 그리고 다시 자연으로 되돌리는<br>
                 ‘Nature to Nature’ 선순환 체계를 구축합니다.
             </p>
         </div>
     </section>
-    <section id="sustainabilityText">
+    <section id="sustainabilityText" class="about_index">
+        <div class="color_line"></div>
         <div>
             <h3>
                 지속가능경영 핵심가치인 <span class="yellow">지속가능한 환경</span>과<br>
@@ -37,116 +41,120 @@
             </h3>
         </div>
     </section>
-    <section id="sustainabilityList">
-        <div>
-            <h2>CJ제일제당의 지속가능경영</h2>
+    <section id="sustainabilityList" class="about_index">
+        <div class="sustainabilityList_wrap">
+            <div>
+                <h2>CJ제일제당의<br class="mobile"> 지속가능경영</h2>
+            </div>
+            <div class="card_wrap">
+                <ul class="sustainability_list">
+                    <li>
+                        <p>환경</p>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <img src="" alt="icon">
+                                    <p>순환경제</p>
+                                    <img src="" alt="arrow">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="" alt="icon">
+                                    <p>기후변화</p>
+                                    <img src="" alt="arrow">
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>사회</p>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <img src="" alt="icon">
+                                    <p>공급망</p>
+                                    <img src="" alt="arrow">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="" alt="icon">
+                                    <p>인적자원</p>
+                                    <img src="" alt="arrow">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="" alt="icon">
+                                    <p>인권</p>
+                                    <img src="" alt="arrow">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="" alt="icon">
+                                    <p>안전보건</p>
+                                    <img src="" alt="arrow">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="" alt="icon">
+                                    <p>품질안전</p>
+                                    <img src="" alt="arrow">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="" alt="icon">
+                                    <p>건강과 영양</p>
+                                    <img src="" alt="arrow">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="" alt="icon">
+                                    <p>사회공헌</p>
+                                    <img src="" alt="arrow">
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>지배구조</p>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <img src="" alt="icon">
+                                    <p>이사회</p>
+                                    <img src="" alt="arrow">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="" alt="icon">
+                                    <p>주주환원</p>
+                                    <img src="" alt="arrow">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="" alt="icon">
+                                    <p>윤리경영</p>
+                                    <img src="" alt="arrow">
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <ul class="sustainability_list">
-            <li>
-                <p>환경</p>
-                <ul>
-                    <li>
-                        <a href="#">
-                            <img src="" alt="icon">
-                            <p>순환경제</p>
-                            <img src="" alt="arrow">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="" alt="icon">
-                            <p>기후변화</p>
-                            <img src="" alt="arrow">
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <p>사회</p>
-                <ul>
-                    <li>
-                        <a href="#">
-                            <img src="" alt="icon">
-                            <p>공급망</p>
-                            <img src="" alt="arrow">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="" alt="icon">
-                            <p>인적자원</p>
-                            <img src="" alt="arrow">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="" alt="icon">
-                            <p>인권</p>
-                            <img src="" alt="arrow">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="" alt="icon">
-                            <p>안전보건</p>
-                            <img src="" alt="arrow">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="" alt="icon">
-                            <p>품질안전</p>
-                            <img src="" alt="arrow">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="" alt="icon">
-                            <p>건강과 영양</p>
-                            <img src="" alt="arrow">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="" alt="icon">
-                            <p>사회공헌</p>
-                            <img src="" alt="arrow">
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <p>지배구조</p>
-                <ul>
-                    <li>
-                        <a href="#">
-                            <img src="" alt="icon">
-                            <p>이사회</p>
-                            <img src="" alt="arrow">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="" alt="icon">
-                            <p>주주환원</p>
-                            <img src="" alt="arrow">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="" alt="icon">
-                            <p>윤리경영</p>
-                            <img src="" alt="arrow">
-                        </a>
-                    </li>
-                </ul>
-            </li>
-        </ul>
     </section>
     <section id="search">
         <div>
             <div>
-                <p><span class="grey">2024년</span>CJ제일제당 지속가능경영 보고서</p>
+                <p><span class="grey">2024년</span><br class="mobile">CJ제일제당 지속가능경영 보고서</p>
                 <a href="">
                     <p>PDF 다운로드</p>
                     <img src="" alt="download">
@@ -361,7 +369,16 @@
                     </div>
                 </li>
             </ul>
+            <div class="sus_ctrl">
+                <a href="#" class="left">
+                    <img src="" alt="left">
+                </a>
+                <a href="#" class="right">
+                    <img src="" alt="right">
+                </a>
+            </div>
         </div>
+        
     </section>
 </body>
 </html>
