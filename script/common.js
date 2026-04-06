@@ -30,4 +30,10 @@ $(function(){
   $('.sub_menu_list>li').mouseenter(function(){
     $(this).css('background-color', '#FF9700').siblings().css('background-color', '#fff')
   })
+
+
+  //푸터-패밀리 사이트 버튼
+  $('#footer button').click(function(){
+      $('#footer .site_list').css('display', 'block')
+  })
 })

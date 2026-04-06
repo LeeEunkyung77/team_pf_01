@@ -4,8 +4,10 @@
 .gery{color: grey;}
 
 /* 헤더 */
-#header{position: fixed; width: 100%; height: 80px; left: 0; top: 0; z-index: 999; transition-duration: 0.5s; background-color: #000;}
-#header .header_inner{position: relative; width: 92%; margin: 0 auto; display: flex; height: 80px;}
+#header{position: fixed; width: 100%; height: 100px; left: 0; top: 0; z-index: 999; transition-duration: 0.5s; background-color: #000;}
+#header::after{content: ""; display: block; position: absolute; width: 100%; height: 4px; background-color: #FF9700; top: 0;}
+#header .header_inner{position: relative; width: 92%; margin: 0 auto; display: flex; height: 100px;}
+
 
 /* 헤더로고 */
 #header h1{position: absolute; left: 0; top: 50%; transform: translateY(-50%); transition-duration: 0.5s;}
@@ -14,9 +16,10 @@
 
 /* 헤더 gnb */
 #header .gnb{position: absolute; left: 50%; transform: translateX(-50%);}
-#header .gnb ul{display: flex;}
-#header .gnb ul li{width: 120px; text-align: center; line-height: 80px; height: 80px; font-weight: bold;}
-#header .gnb ul li a{color: #fff;}
+#header .gnb ul{display: flex; }
+#header .gnb ul li{width: 120px; text-align: center; line-height: 100px; height: 100px; font-weight: bold;}
+#header .gnb ul li:hover a{color: #FF9700; letter-spacing: 0.14em;}
+#header .gnb ul li a{color: #fff; transition-duration: 0.5s;}
 
 /* 헤더 gnb 버튼모음 - 현재 수정이 꽤나 필요할 듯.*/ 
 #header .gnb_btn{position: absolute; right: 0; top: 50%; transform: translateY(-50%); transition-duration: 0.5s;}
@@ -58,3 +61,61 @@
 .sub_menu_wrap .sub_menu_inner .sub_menu_right li{width: 24%;}
 .sub_menu_wrap .sub_menu_inner .sub_menu_right li img{height: 140px; width: 100%; margin-bottom: 10px;}
 .sub_menu_wrap .sub_menu_inner .sub_menu_right li p:nth-child(2){font-weight: bold; font-size: 16px; margin-bottom: 8px;}
+
+/* mgnb버튼 */
+.mgnb{position: fixed; right: 0; top: 0; width: 50%; height: 100%; background-color: #fff; z-index: 999; display: none;}
+.mgnb::after{content: ""; display: block; position: absolute; width: 100%; height: 4px; background-color: #FF9700; top: 0;}
+.mgnb .mgnb_wrap{position: absolute; left: 0; top: 0; height: 100vh; width: 100%;}
+
+.mgnb .mgnb_wrap .m_top{height: 100px; background-color: beige; display: flex; justify-content: space-between; align-items: center;}
+.mgnb_close{position: relative;  width: 100px; height: 100px; background: none; border: none;}
+
+/* mgnb close 버튼 */
+.mgnb_close span{position: absolute; width: 40px; height: 4px; display: block; background-color: #06793e; top: 50%; right: 0; transform: translateY(-50%) rotate(0); transition-duration: 0.5s;}
+.mgnb_close span:last-child{transform: translate(-50%, -50%) rotate(0);}
+
+/* mgnb 내용*/
+.mgnb .mgnb_wrap .m_menu_wrap{display: flex; width: 100%;}
+.mgnb .mgnb_wrap .m_menu_wrap .m_menu{width: 40%;}
+.mgnb .mgnb_wrap .m_menu_wrap .m_menu li{padding: 20px; border-bottom: 1px solid gray; box-sizing: border-box; transition-duration: 0.5s;}
+.mgnb .mgnb_wrap .m_menu_wrap .m_menu li.mgnb_select{background-color: #FF9700;}
+.mgnb .mgnb_wrap .m_menu_wrap .m_menu li a{font-size: 1.2em; color: grey; transition-duration: 0.5s;}
+.mgnb .mgnb_wrap .m_menu_wrap .m_menu li.mgnb_select a{color: #fff; font-weight: bold; letter-spacing: 0.14em;}
+.mgnb .mgnb_wrap .m_menu_wrap .m_list {width: 60%; background-color: bisque;}
+
+
+/* 푸터 */
+#footer{position: relative; background-color: #313131; width: 100%; height: 500px; display: flex; flex-direction: column; align-items: center; justify-content: center;}
+#footer p, #footer a{color: #ccc; font-size: 0.9em; line-height: 1.6em;}
+#footer .footer_wrap{position: relative; width: 92%; display: flex; justify-content: space-between; height: 360px;}
+
+#footer .footer_center{display: flex; flex-direction: column; justify-content: space-between;}
+#footer .footer_center .fnb ul{display: flex; }
+#footer .footer_center .fnb ul:first-child a{font-size: 1.1em; font-weight: bold;}
+#footer .footer_center .fnb li{margin-right: 24px; padding: 4px; box-sizing: border-box;}
+#footer .footer_center .fnb li:last-child{margin-right: 0;}
+#footer .footer_center>div p{margin-bottom: 4px;}
+#footer .footer_center>div p span{position: relative;}
+#footer .footer_center>div p span:first-child{margin-right: 10px;}
+#footer .footer_center>div p span:first-child::after{content: ""; display: block; position: absolute; background-color: #fff; right: -8px; width: 1px; height: 12px; top: 6px}
+
+#footer .footer_right{display: flex; flex-direction: column; justify-content: space-between; align-items: end;}
+#footer .footer_right>ul{display: flex;}
+#footer .footer_right>ul li{margin-right: 10px;}
+#footer .footer_right>ul li:last-child{margin-right: 0;}
+
+/* 푸터 - 패밀리사이트 */
+#footer .footer_right>div:first-of-type{position: relative;}
+#footer .footer_right>div:first-of-type button{position: relative; background-color: #ccc; width: 150px; height: 40px; border-radius: 75px; border: 1px soild #ccc; box-sizing: border-box; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; line-height: 40px;}
+#footer .footer_right>div:first-of-type button p{color: #313131; font-size: 1em;}
+#footer .footer_right>div:first-of-type button div{ position: relative; width: 20px; height: 20px;}
+#footer .footer_right>div:first-of-type button span{background-color: #313131; width: 16px; height: 1px; display: block; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+#footer .footer_right>div:first-of-type button span:last-child{transform: rotate(90deg);width: 14px; left: 15%;}
+
+#footer .footer_right>div:first-of-type .site_list{position: absolute; width: 600px; background-color: #ccc; right: 0px; bottom: 50px; border-radius: 1em; border: 2px solid #313131; font-size: 0.8em; padding: 10px; display: none;}
+#footer .footer_right>div:first-of-type .site_list p{color: #313131; font-weight: bold; margin-bottom: 4px;}
+#footer .footer_right>div:first-of-type .site_list a{color: #313131;}
+#footer .footer_right>div:first-of-type .site_list>ul{display: flex; justify-content: space-between;}
+
+#footer .footer_right>div:last-child p:first-child{text-align: end;}
+#footer .footer_right>div:last-child p:nth-child(2){font-size: 3em; font-weight: bold;}

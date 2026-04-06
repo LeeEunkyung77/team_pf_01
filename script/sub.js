@@ -477,4 +477,10 @@ $(function(){
             $(this).css('opacity','0.8');
         })
     })
+
+
+    $('#newsroom .new_list ul li').each(function(index){
+        let newImg='/img/sus_news_'+[index+1]+'.jpg'
+        $(this).css('background-image', 'url('+newImg+')')
+    })
 });
