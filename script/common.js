@@ -2,7 +2,7 @@ $(function(){
 
   //카테고리 인덱스
   $('#header .gnb li').each(function(index){
-    let bgColor = ['#f00', '#f30', '#f60', '#f90', '#fc0', '#fff']
+    let bgColor = ['#f00', '#f30', '#f60', '#f90', '#fc0', '#ccc']
 
     $(this).mouseenter(function(){
     $('.sub_menu_inner>li').eq(index).css('display', 'flex').siblings().css('display', 'none')
