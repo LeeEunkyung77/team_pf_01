@@ -50,7 +50,7 @@
 #event{position: relative; height: 100vh; overflow: hidden; background-color: #ffffff; z-index: 1; margin-top: 80px;}
 #event .event_name{position: absolute; width: 100%; top: 5%; display: flex; justify-content: center; padding-top: 50px; z-index: 1;}
 #event .event_name .mid_line{content: ''; display: block; width: 300px; height: 1px; position: relative; background-color: #212121; margin: auto 20px;}
-#event .event_img{position: relative; height: 100vh; background-image: url('img/bibigo_seventeen.jpg'); background-repeat: no-repeat; background-position: right; background-size: cover; transition-duration: 1s;}
+#event .event_img{position: relative; height: 100vh; background-image: url(../img/bibigo_seventeen.jpg); background-repeat: no-repeat; background-position: right; background-size: cover; transition-duration: 1s;}
 /* 효과 */
 /* #event .event_img{height: 60vh; max-width: 75%; margin: 20vh auto; border-radius: 500px;} */
 /* #event .event_img{position: relative; width: 100%; height: 100%;}
@@ -78,8 +78,8 @@
 /* #newsroom .newsroom_title_wrap a:hover div{transition-duration: 1s; width: 110%;} */
 #newsroom .newsroom_title_wrap a:hover img{opacity: 1; transition-duration: 0.5s; display: block;}
 /*뉴스룸 이미지*/
-#newsroom .newsroom_wrap .newsroom_left{background-image: url('img/newsroom_left.jpg'); background-repeat: no-repeat; background-position: center;}
-#newsroom .newsroom_wrap .newsroom_right{background-image: url('img/newsroom_right.jpg'); background-repeat: no-repeat; background-position: center;}
+#newsroom .newsroom_wrap .newsroom_left{background-image: url(../img/newsroom_left.jpg); background-repeat: no-repeat; background-position: center;}
+#newsroom .newsroom_wrap .newsroom_right{background-image: url(../img/newsroom_right.jpg); background-repeat: no-repeat; background-position: center;}
 
 /* 피씨 */
 @media screen and (min-width:1201px){
