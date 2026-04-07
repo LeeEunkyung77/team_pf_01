@@ -2,7 +2,7 @@ $(function(){
     //scroll
     let winHeight = $(window).height();
     let winWidth = $(window).width();
-    let sectionNum = 8;
+    let sectionNum = 7;
     let wheelNum = 0;
 
     let CJaboutUsListTop = $('#CJaboutUsList').offset().top;
