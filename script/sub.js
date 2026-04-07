@@ -8,15 +8,7 @@ $(function(){
     let CJaboutUsListTop = $('#CJaboutUsList').offset().top;
     let out_list1Top = $('.out_list1').offset().top;
     let out_list2Top = $('.out_list1').offset().top;
-    let CJaboutUsList2Top = $('#CJaboutUsList2').offset().top;
-    let in_list1Top = $('.in_list1').offset().top;
-    let in_list2Top = $('.in_list2').offset().top;
-    let in_list3Top = $('.in_list3').offset().top;
-    let mvcTop = $('#mvc').offset().top;
-    let mvc_list1Top = $('.mvc_list1').offset().top;
-    let mvc_list2Top = $('.mvc_list2').offset().top;
-    let mvc_list3Top = $('.mvc_list3').offset().top;
-    let aboutSummaryTop = $('#aboutSummary').offset().top;
+
 
     let scrollTop
 
