@@ -37,9 +37,9 @@
 #mvc>ul>li>div .core_values{position: relative; display: flex; justify-content: space-between; width: 70%; margin: 0 auto;}
 #mvc>ul>li>div .core_values>li{width: 32%; height: 40vh; min-height: 250px; background-position: center; background-repeat: cover; display: flex; flex-direction: column; justify-content: end;}
 #mvc>ul>li>div .core_values>li p{margin-bottom: 20px; margin-left: 20px; margin-right: 20px; background-color: rgba(255,255,255,0.7);}
-#mvc>ul>li>div .core_values>li:nth-child(1){background-image: url(/img/about_core_1.jpg); background-repeat: no-repeat; background-position: center; background-size: cover;}
-#mvc>ul>li>div .core_values>li:nth-child(2){background-image: url(/img/about_core_2.jpg); background-repeat: no-repeat; background-position: center; background-size: cover;}
-#mvc>ul>li>div .core_values>li:nth-child(3){background-image: url(/img/about_core_3.jpg); background-repeat: no-repeat; background-position: center; background-size: cover;}
+#mvc>ul>li>div .core_values>li:nth-child(1){background-image: url(../img/about_core_1.jpg); background-repeat: no-repeat; background-position: center; background-size: cover;}
+#mvc>ul>li>div .core_values>li:nth-child(2){background-image: url(../img/about_core_2.jpg); background-repeat: no-repeat; background-position: center; background-size: cover;}
+#mvc>ul>li>div .core_values>li:nth-child(3){background-image: url(../img/about_core_3.jpg); background-repeat: no-repeat; background-position: center; background-size: cover;}
 #mvc>ul>li>div .core_values>li:first-child p{text-align: left;}
 #mvc>ul>li>div .core_values>li:nth-child(2) p{text-align: center;}
 #mvc>ul>li>div .core_values>li:last-child p{text-align: right;}
@@ -59,9 +59,9 @@
 #aboutSummary .empty_box{height: 98.5vh; width: 33.33%; -webkit-backdrop-filter: blur(0px); backdrop-filter: blur(0px); position: absolute; transition-duration: 0.5s;}
 #aboutSummary .empty_box.box1{border-top-left-radius: 10rem; border-bottom-left-radius: 10rem;}
 #aboutSummary .empty_box.box3{border-top-right-radius: 10rem; border-bottom-right-radius: 10rem; }
-#aboutSummary .about_summary_wrap a:first-child{border-top-left-radius: 10rem; border-bottom-left-radius: 10rem; background-image: url('/img/about_b_1.jpg'); background-position: center; background-size: cover;}
-#aboutSummary .about_summary_wrap a:nth-child(2){background-image: url("/img/about_b_2.jpg"); background-position: center; background-size: cover;}
-#aboutSummary .about_summary_wrap a:last-child{border: none; border-top-right-radius: 10rem; border-bottom-right-radius: 10rem; background-image: url('/img/about_b_3.jpg'); background-position: center; background-size: cover;}
+#aboutSummary .about_summary_wrap a:first-child{border-top-left-radius: 10rem; border-bottom-left-radius: 10rem; background-image: url(../img/about_b_1.jpg); background-position: center; background-size: cover;}
+#aboutSummary .about_summary_wrap a:nth-child(2){background-image: url(../img/about_b_2.jpg); background-position: center; background-size: cover;}
+#aboutSummary .about_summary_wrap a:last-child{border: none; border-top-right-radius: 10rem; border-bottom-right-radius: 10rem; background-image: url(../img/about_b_3.jpg); background-position: center; background-size: cover;}
 #aboutSummary .about_summary_wrap a:hover .empty_box{-webkit-backdrop-filter: blur(5px); backdrop-filter: blur(5px);}
 #aboutSummary .about_summary_wrap a:hover img:first-child{background-color: #FF9700;}
 #aboutSummary .about_summary_wrap a>div{display: flex; flex-direction: column; text-align: center;}
@@ -74,7 +74,7 @@
 #brandBanner{position: relative; width: 100%; overflow: hidden;}
 #brandBanner ul{position: relative; height: 300vh; display: flex; flex-direction: column; }
 #brandBanner ul li{position:relative; height: 100vh; display: flex; justify-content: center; flex-direction: column;}
-#brandBanner ul li .brand_banner{height: 100%; width: 100%; margin: 0 auto; background-image: url('/img/csr_overview.jpg'); background-size: cover; background-position: center; transition-duration: 1.5s;}
+#brandBanner ul li .brand_banner{height: 100%; width: 100%; margin: 0 auto; background-image: url(../img/csr_overview.jpg); background-size: cover; background-position: center; transition-duration: 1.5s;}
 #brandBanner ul li .brand_banner img{width: 174px; position: absolute; top: 47%; left: calc(50% - 87px); opacity: 0; transition-duration: 1s;}
 #brandBanner ul li p{width: 50%; margin: 0 auto; text-align: center; font-size: 3em; font-weight: 500;}
 #brandBanner ul li span{font-size: 1.5em; transition-duration: 0.5s;}
@@ -96,7 +96,7 @@
 /* INVESTORS */
 /* investors */
 #investors{position: relative;}
-#investors .investors_bg{position: relative; width: 100%; height: calc(100vh + 80px); background-image: url('/img/investors_overview.jpg'); background-size: cover; background-position: right top; background-repeat: no-repeat; align-items: stretch; background-attachment: fixed;}
+#investors .investors_bg{position: relative; width: 100%; height: calc(100vh + 80px); background-image: url(../img/investors_overview.jpg); background-size: cover; background-position: right top; background-repeat: no-repeat; align-items: stretch; background-attachment: fixed;}
 #investors .investors_bg h2{position: relative; width: 100%; height: 100%; text-align: center; display: flex; flex-direction: column; justify-content: center; font-size: 4em; color:#212121;}
 /* 그라데이션 채워지는 텍스트 */
 #investors .investors_bg h2::before{ content: attr(data-text); position: absolute; left:0; top:calc(50% - 48px); width:100%; height:100%; background: linear-gradient(to right, #ededed 50%, #212121 50%); background-size:200% 100%; background-position:right; -webkit-background-clip:text; color:transparent; animation:textFill 3s forwards;}
@@ -109,7 +109,7 @@
   }
 }
 /* investorsItem */
-#investorsItem{position: relative; width: 85%; margin: 0 auto; margin-top: -80px; padding: 30px 0; background-image: url('/img/stock_information.png'); background-position: right top; background-size:contain; background-repeat: no-repeat; background-color: #ededed; }
+#investorsItem{position: relative; width: 85%; margin: 0 auto; margin-top: -80px; padding: 30px 0; background-image: url(../img/stock_information.png); background-position: right top; background-size:contain; background-repeat: no-repeat; background-color: #ededed; }
 #investorsItem .investors_info{position: relative; width: 92%; margin: 0 auto; display: flex; flex-direction: column;display: flex; flex-direction: column; flex-wrap: wrap;}
 #investorsItem .investors_info h4{font-size: 1.6em; line-height: 40px;}
 #investorsItem .investors_info>div{width: 92%; display: flex; justify-content: space-between; height: 50%; line-height: 100%; text-align:justify; margin: 30px 0;}
@@ -171,7 +171,7 @@
 /* SUSTAINABILITY */
 /* sustainabilityBanner */
 #sustainabilityBanner{position: relative; height: 100vh; background-position: center; background-repeat: no-repeat; background-size: cover; overflow: hidden; z-index: 1;}
-.white_reveal{position: absolute; top:0; left:0; width:100%; height:100%; background-image: url('/img/csr_overview.jpg'); background-position: center; background-repeat: no-repeat; background-size: cover; clip-path: circle(0% at 50% 50%);/* clip-path는 요소의 보이는 영역을 자르는 속성
+.white_reveal{position: absolute; top:0; left:0; width:100%; height:100%; background-image: url(../img/csr_overview.jpg); background-position: center; background-repeat: no-repeat; background-size: cover; clip-path: circle(0% at 50% 50%);/* clip-path는 요소의 보이는 영역을 자르는 속성
     circle(크기 at x y)
     0% = 원 크기가 0 (아무것도 안보임)
     50% 50% = 화면 정가운데
@@ -200,9 +200,9 @@
 /* #sustainabilityList .sustainability_list>li:hover{transform: translateY(-15px);} */
 #sustainabilityList .sustainabilityList_wrap .card_wrap .sustainability_list>li::after{content:""; position:absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.45); opacity:0; transition: opacity 0.4s;}
 #sustainabilityList .sustainabilityList_wrap .card_wrap .sustainability_list>li:hover::after{opacity:1;}
-#sustainabilityList .sustainabilityList_wrap .card_wrap .sustainability_list>li:first-child{background-image: url('/img/overview2_1.jpg'); background-position: center; background-size: cover; background-repeat: no-repeat; margin-top: 50px;}
-#sustainabilityList .sustainabilityList_wrap .card_wrap .sustainability_list>li:nth-child(2){background-image: url('/img/overview2_2.jpg'); background-position: center; background-size: cover; background-repeat: no-repeat; margin-top: -50px;}
-#sustainabilityList .sustainabilityList_wrap .card_wrap .sustainability_list>li:last-child{background-image: url('/img/overview2_3.jpg'); background-position: center; background-size: cover; background-repeat: no-repeat; margin-top: 50px;}
+#sustainabilityList .sustainabilityList_wrap .card_wrap .sustainability_list>li:first-child{background-image: url(../img/overview2_1.jpg); background-position: center; background-size: cover; background-repeat: no-repeat; margin-top: 50px;}
+#sustainabilityList .sustainabilityList_wrap .card_wrap .sustainability_list>li:nth-child(2){background-image: url(../img/overview2_2.jpg); background-position: center; background-size: cover; background-repeat: no-repeat; margin-top: -50px;}
+#sustainabilityList .sustainabilityList_wrap .card_wrap .sustainability_list>li:last-child{background-image: url(../img/overview2_3.jpg); background-position: center; background-size: cover; background-repeat: no-repeat; margin-top: 50px;}
 #sustainabilityList .sustainabilityList_wrap .card_wrap .sustainability_list>li>p{font-size: 0.5em; margin: 20px 0; text-align: center; color: #ededed; position: absolute; bottom: 40px; left: 0; width: 100%; transition: transform 0.5s ease; z-index: 2; text-shadow: 1px 1px 1px #212121;}
 #sustainabilityList .sustainabilityList_wrap .card_wrap .sustainability_list>li:hover>p{transform: translateY(-350px);}
 #sustainabilityList .sustainabilityList_wrap .card_wrap .sustainability_list>li>ul{position: absolute; bottom: 30px; left: 0; margin: 40px 0px; width: 100%; height: 240px; display: flex; flex-direction: column; justify-content: end; flex-wrap: wrap; z-index: 2; opacity:0; transform: translateY(50px); transition: all 0.4s ease;}
@@ -230,7 +230,7 @@
 #newsroom>ul>li>a:hover p{color: #EF151E; transition-duration: 0.5s; font-weight: 500;}
 #newsroom .new_list{position: relative; width: 80%; margin: 0 auto; overflow: hidden; margin-bottom: 60px;}
 #newsroom .new_list ul{width: 200%; display: flex; justify-content: space-evenly; transition-duration: 0.5s;}
-#newsroom .new_list ul li{width: 9%; background-image: url('/img/sus_news_1.jpg'); background-position: center; background-repeat: no-repeat; background-size: cover;}
+#newsroom .new_list ul li{width: 9%; background-image: url(../img/sus_news_1.jpg); background-position: center; background-repeat: no-repeat; background-size: cover;}
 #newsroom .new_list ul li .news_bg{width: 100%; height: 60%; cursor: pointer;}
 #newsroom .new_list ul li:hover .news_bg{height: 100%; background-image: linear-gradient(#ffffff, #FF9700); opacity: 0.5; transition-duration: 0.5s;}
 #newsroom .new_list ul li:hover .news_text{opacity: 1; transition-duration: 0.5s; font-weight: bold;}
